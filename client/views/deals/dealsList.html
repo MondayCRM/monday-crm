@@ -1,0 +1,44 @@
+<template name="deals_list">
+
+
+  <div class="innerAll">
+
+    <div class="innerB">
+      <h3 class="margin-none pull-left">Deals</h3>
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div class="widget">
+      <div class="widget-body padding-none">
+
+        {{#each items}}
+        <div class="innerAll border-bottom">
+          <div class="row">
+
+            <div class="col-sm-12">
+              <ul class="media-list">
+                <li class="media">
+                  <div class="media-body">
+                    <span class="label label-success">{{status}}</span>
+                    <a href="{{pathFor route='dealDetail'}}" class="media-heading">{{name}}</a>
+                    <div class="clearfix"></div>
+                    {{description}}
+                    <div class="clearfix"></div>
+                    {{#each getJobPositions}}
+                    <small><i class="fa fa-user"></i> {{getPersonName}} at <i class="fa fa-bank"></i> {{getCompanyName}}</small>
+                    <div class="clearfix"></div>
+                    {{/each}}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+
+  </div>
+</template>
