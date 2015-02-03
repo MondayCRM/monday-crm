@@ -1,6 +1,6 @@
 Meteor.startup(function() {
 
-  if(0) {
+  if(Persons.find().count() == 0) {
     console.log('> seedDemo start...');
     var createTask = function(referenceId) {
       entity = {
