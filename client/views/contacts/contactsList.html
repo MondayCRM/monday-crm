@@ -1,0 +1,5 @@
+<template name="contactsList">
+	{{#each contacts}}
+		<a href="{{pathFor route='contact' data=this}}">{{name}}</a><br />
+	{{/each}}
+</template>

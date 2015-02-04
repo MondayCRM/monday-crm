@@ -1,6 +1,6 @@
 Meteor.startup(function() {
 
-  if(Persons.find().count() == 0 || 1) {
+  if(Contacts.find().count() == 0) {
     console.log('> seedDemo start...');
     var createTask = function(referenceId) {
       entity = {
@@ -18,8 +18,6 @@ Meteor.startup(function() {
     Activities.remove({});
     Deals.remove({});
     JobPositions.remove({});
-    Persons.remove({});
-    Companies.remove({});
     Contacts.remove({});
 
 

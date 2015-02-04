@@ -1,17 +1,3 @@
-Router.configure({
-  layoutTemplate: 'baseLayout',
-
-  waitOn: function () {
-    return [
-      Meteor.subscribe('contacts'),
-      Meteor.subscribe('jobPositions'),
-      Meteor.subscribe('deals'),
-      Meteor.subscribe('activities'),
-      Meteor.subscribe('tasks')
-    ]
-  }
-});
-
 Router.route('/', {
   template: 'home',
   action: function () {
@@ -19,42 +5,6 @@ Router.route('/', {
   }
 });
 
-Router.route('/companies', {
-  name: 'companies.list',
-  template: 'companies.list',
-  action: function () {
-    this.render();
-  }
-});
-
-Router.route('/persons', {
-  name: 'persons.list',
-  template: 'persons.list',
-  action: function () {
-    this.render();
-  }
-});
-
-Router.route('/person/:_id', {
-  name: 'persons.detail',
-  template: 'persons.detail',
-  data: function() {
-    if (this.ready()) {
-      var person = Persons.findOne({_id: this.params._id});
-      return {
-        person: person,
-        positions: person.getPositions()
-      };
-    }
-  },
-  action: function () {
-    if (this.ready()) {
-      this.render();
-    } else {
-      this.render('loading');
-    }
-  }
-});
 
 Router.route('/deals', {
   name: 'dealsList',
