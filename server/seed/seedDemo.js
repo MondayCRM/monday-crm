@@ -1,6 +1,6 @@
 Meteor.startup(function() {
 
-  if(Persons.find().count() == 0) {
+  if(Persons.find().count() == 0 || 1) {
     console.log('> seedDemo start...');
     var createTask = function(referenceId) {
       entity = {
@@ -20,24 +20,15 @@ Meteor.startup(function() {
     JobPositions.remove({});
     Persons.remove({});
     Companies.remove({});
+    Contacts.remove({});
 
 
     var entity = {};
 
-    var companies = [];
-    var persons = [];
+    var contacts = [];
     var jobPositions = [];
     var deals = [];
 
-    // insert companies
-    for(var i = 1; i <= 30; i++) {
-      entity = {
-        name: Fake.word() + ' ' + Fake.fromArray(['s.r.o', 'inc.', 'sro']),
-        description: Fake.sentence(_.random(20, 50))
-      };
-
-      companies.push(Companies.insert(entity));
-    }
 
     // insert persons
     var personId = null;
@@ -45,27 +36,35 @@ Meteor.startup(function() {
       var randomUser = Fake.user();
       entity = {
         name: randomUser.fullname,
-        emails: [randomUser.email]
+        emails: [{address: randomUser.email}]
       };
 
       if(_.random(0,2) < 2) {
         var randomUser2 = Fake.user();
-        entity.emails.push(randomUser2.email);
+        entity.emails.push({address: randomUser2.email});
       }
 
-      personId = Persons.insert(entity);
-      persons.push(personId);
+      contactId = Contacts.insert(entity);
+      contacts.push(contactId);
 
 
-      jobPositions.push(JobPositions.insert({
-        company_id: _.sample(companies),
-        person_id: personId,
-        name: Fake.fromArray(['CTO', 'CEO', 'Marketing director', 'Director of directors', 'Superman'])
-      }));
+      var count = _.random(0, 4);
+      for(var j = count; j <= 6; j++) {
+        jobholder = _.sample(contacts);
+        if(jobholder == contactId) continue;
+
+        jobPositions.push(JobPositions.insert({
+          employer_id: contactId,
+          jobholder_id: jobholder,
+          name: Fake.fromArray(['CTO', 'CEO', 'Marketing director', 'Director of directors', 'Superman'])
+        }));        
+      }
     }
 
+
+
     // insert deals
-    for(var i = 1; i <= 15; i++) {
+    for(var i = 1; i <= 0; i++) {
       entity = {
         name: Fake.sentence(_.random(2, 7)),
         description: Fake.sentence(_.random(5, 30)),
@@ -95,7 +94,7 @@ Meteor.startup(function() {
 
 
     // insert tasks
-    for(var i = 1; i <= 15; i++) {
+    for(var i = 1; i <= 0; i++) {
       createTask(_.sample(companies));
       createTask(_.sample(persons));
       createTask(_.sample(deals));

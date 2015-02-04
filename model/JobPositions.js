@@ -1,17 +1,10 @@
 JobPositions = new Mongo.Collection('jobPositions');
 
 var jobPositionsSchema = new SimpleSchema([{
-  company_id: {
-    type: String,
-    autoform: {
-      options: function () {
-        return Companies.find().map(function (c) {
-          return {label: c.name, value: c._id};
-        });
-      }
-    }
+  employer_id: {
+    type: String
   },
-  person_id: {
+  jobholder_id: {
     type: String
   },
   name: {
@@ -23,18 +16,18 @@ var jobPositionsSchema = new SimpleSchema([{
     type: String,
     optional: true
   }
-}, contactsSchema]);
+}, contactsFieldsSchema]);
 
 JobPositions.attachSchema(jobPositionsSchema);
 
 
 JobPositions.helpers({
-  getCompanyName: function() {
-    if(!this.company_id) return null;
-    return Companies.findOne(this.company_id).name;
+  getEmployerName: function() {
+    if(!this.employer_id) return null;
+    return Contacts.findOne(this.employer_id).name;
   },
-  getPersonName: function() {
-    if(!this.person_id) return null;
-    return Persons.findOne(this.person_id).name;
+  getJobholderName: function() {
+    if(!this.jobholder_id) return null;
+    return Contacts.findOne(this.jobholder_id).name;
   }
 });

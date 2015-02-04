@@ -9,6 +9,6 @@ var personsSchema = new SimpleSchema([{
     type: String,
     optional: true
   }
-}, contactsSchema]);
+}, contactsFieldsSchema]);
 
 Persons.attachSchema(personsSchema);

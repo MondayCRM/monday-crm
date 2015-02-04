@@ -3,8 +3,7 @@ Router.configure({
 
   waitOn: function () {
     return [
-      Meteor.subscribe('companies'),
-      Meteor.subscribe('persons'),
+      Meteor.subscribe('contacts'),
       Meteor.subscribe('jobPositions'),
       Meteor.subscribe('deals'),
       Meteor.subscribe('activities'),
