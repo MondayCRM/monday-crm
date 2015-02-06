@@ -9,13 +9,13 @@ if (Meteor.isClient) {
 			maxSpeedY: 0.1,
 			directionX: 'center', 
 			directionY: 'center',
-			density: 5000,
+			density: 10000,
 			dotColor: '#fafced',
 			lineColor: '#fafced',
 			particleRadius: 4,
 			lineWidth: .4,
 			curvedLines: false,
-			proximity: 70, 
+			proximity: 170, 
 			parallax: true,
 			parallaxMultiplier: 17
 		});
