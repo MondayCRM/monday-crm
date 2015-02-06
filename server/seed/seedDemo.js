@@ -1,6 +1,6 @@
 Meteor.startup(function() {
 
-  if(Contacts.find().count() == 0) {
+  if(Settings.find().count() == 0) {
     console.log('> seedDemo start...');
     var createTask = function(referenceId) {
       entity = {
@@ -19,6 +19,9 @@ Meteor.startup(function() {
     Deals.remove({});
     JobPositions.remove({});
     Contacts.remove({});
+    Settings.remove({});
+
+    Settings.insert({});
 
 
     var entity = {};
@@ -55,7 +58,7 @@ Meteor.startup(function() {
           employer_id: contactId,
           jobholder_id: jobholder,
           name: Fake.fromArray(['CTO', 'CEO', 'Marketing director', 'Director of directors', 'Superman'])
-        }));        
+        }));
       }
     }
 

@@ -26,3 +26,7 @@ meteorhacks:subs-manager
 d0minikk:materialize-meteor
 percolate:momentum-iron-router
 jquery
+tap:i18n
+
+monday-i18n
+momentjs:moment
