@@ -58,30 +58,42 @@
 .login{
 	display: block;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
+	padding-top: 30px;
 	
 	h2{
 		color: #fff;
 		margin-bottom: 0px;
 		font-weight: bold;
+		margin-top: 0px;
 		margin-left: -2px;
 
 		span{
 			font-weight: 100;
-			color: #616161;
+			color: #62728c;
 		}
 	}
 	blockquote{
 		margin-top: 0px;
 		padding-left: 0.9rem;
+		color: #333;
 		border-left-color: #fff;
 	}
 }
+@media only screen and (max-width : 600px) {
+	.login-form{
+		background-color: rgba(255, 255, 255, 0.7);
+		margin: 0px;
+		padding: 20px;
+
+	}
+}
+
 .login-form{
 
 	display: block;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	padding-top: 7px;
 
 	ul.tabs{
@@ -89,9 +101,10 @@
 
 		li.tab{
 			background-color: transparent;
+			cursor: pointer;
 
 			a{
-				color: #90caf9;
+				color: #62728c;
 			}
 			a.active{
 				color: #2196f3;
@@ -107,14 +120,15 @@
 	}
 
 	.input-field .prefix, .input-field input + label{
-		color: #616161;
+		color: #62728c;
 	}
 	input{
-		border-bottom-color: #616161;
+		border-bottom-color: #62728c;
 	}
 
 	.input-field input{
 		font-size: 2em;
+		color: #333;
 	}
 
 	.input-field .active{

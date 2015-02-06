@@ -2,13 +2,39 @@
 
 	<nav class="top-nav white">
 		<div class="container">
-			<div class="nav-wrapper"><a class="page-title"><i class="mdi-social-people"></i> Kontakty</a></div>
+			<div class="row">
+				<div class="col m2 s0 l0">
+					<a href="#" data-activates="nav-mobile" class="button-collapse">
+						<i class="mdi-navigation-menu"></i>
+					</a>
+				</div>
+				<div class="col m8 l12">
+					<div class="nav-wrapper"><a class="page-title"><i class="mdi-social-people"></i> Kontakty</a></div>
+				</div>
+				<div class="col m2 s2 l0">
+				</div>
+			</div>
 		</div>
 	</nav>
 	<div class="container">
+		<div class="row controls">
+			<div class="input-field col s12">
+				<i class="mdi-action-search prefix"></i>
+				<input id="search" type="text">
+				<label for="search">Rýchle vyhľadávanie</label>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col s12">
 				<div class="row">
+					<div class="col l4 m6 s12">
+						<div class="card-panel blue lighten-1 addBtn">
+							<span>
+								<i class="mdi-content-add-circle-outline left"></i>
+								<a href="/add">Pridaj Kontakt</a>
+							</span>
+						</div>
+					</div>
 					{{#each contacts}}
 					<div class="col l4 m6 s12">
 						<div class="card-panel white">

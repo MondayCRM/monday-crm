@@ -4,15 +4,21 @@ nav.top-nav {
 	-moz-box-shadow: none;
 	box-shadow: none;
 
+	a.button-collapse{
+		color: #2196f3;
+		line-height: 92px;
+		vertical-align: middle;
+	}
+
 	a.page-title {
 		line-height: 92px;
-		font-size: 2.5em;
+		font-size: 2em;
 		font-family: 'Open Sans', sans-serif;
-		color: #2196f3;
+		color: #62728c;
 		font-weight: 100;
 
 		i{
-			font-size: 1.2em;
+			font-size: 1.1em;
 			vertical-align: middle;
 		}
 	}
@@ -25,13 +31,48 @@ nav.top-nav {
 			font-size: 36px;
 		}
 	}
+	ul.side-nav.fixed {
+		left: -250px;
+	}
 }
+
+
+.container{
+	.addBtn {
+		padding: 21px;
+		vertical-align: middle;
+	}
+	.addBtn a{
+		color: #fff;
+		text-transform: uppercase;
+
+	}
+	.addBtn i{
+		line-height: 22.5px;
+		color: #fff;
+		font-size: 1.4em;
+	}
+	.controls{
+		padding: 1em 0em 1em 0em;
+		margin-bottom: 0px;
+	}
+
+
+	.input-field .active{
+		color: #2196f3;
+	}
+	.input-field input:focus + label{
+		color: #2196f3;
+	}
+	input:focus{
+		border-bottom-color: #2196f3;
+		box-shadow: 0 1px 0 0 #2196f3;
+	}
+}
+
 @media only screen and (min-width : 993px) {
 	.container {
 		width: 95%;
-		.row{
-			padding: 1em 0em 1em 0em;
-		}
 	}
 }
 
