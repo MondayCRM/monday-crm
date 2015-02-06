@@ -1,38 +1,41 @@
 <template name="home">
-	<div class="container login">
-		<div class="section">
-			<div class="row">
-				<div class="col col l6 m6 s12 ">
-					<h2>MONDAY<span>CRM</span></h2>
-					<blockquote>
-						Prvé inteligentné CRM, ktoré vám prináša zákazníkov.
-					</blockquote>
-				</div>
-				<div class="col col l4 offset-l2 m6 s12">
-					<div class="icon-block login-form">
-						<ul class="tabs">
-							<li class="tab col s6"><a class="active"><i class="mdi-action-lock-outline"></i> Login</a></li>
-							<li class="tab col s6"><a><i class="mdi-file-folder-shared"></i> Signup</a></li>
-						</ul>
+	<div class="full-background">
+		<div id="particles"></div>
+		<div class="container login">
+			<div class="section">
+				<div class="row">
+					<div class="col col l6 m6 s12 ">
+						<h2>MONDAY<span>CRM</span></h2>
+						<blockquote>
+							Inteligentné CRM, ktoré prináša zákazníkov.
+						</blockquote>
+					</div>
+					<div class="col col l4 offset-l2 m6 s12">
+						<div class="icon-block login-form">
+							<ul class="tabs">
+								<li class="tab col s6"><a class="active"><i class="mdi-action-lock-outline"></i> Login</a></li>
+								<li class="tab col s6"><a><i class="mdi-file-folder-shared"></i> Signup</a></li>
+							</ul>
 
-						<p class="light">
-							<div class="row">
-								<div class="input-field col s12">
-									<i class="mdi-action-account-circle prefix"></i>
-									<input id="username" type="text" class="validate">
-									<label for="username">Používatelské meno</label>
-								</div>
+							<p class="light">
+								<div class="row">
+									<div class="input-field col s12">
+										<i class="mdi-action-account-circle prefix"></i>
+										<input id="username" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+										<label for="username">Používatelské meno</label>
+									</div>
 
-								<div class="input-field col s12">
-									<i class="mdi-communication-vpn-key prefix"></i>
-									<input id="password" type="password" class="validate">
-									<label for="password">Heslo</label>
+									<div class="input-field col s12">
+										<i class="mdi-communication-vpn-key prefix"></i>
+										<input id="password" type="password" class="validate">
+										<label for="password">Heslo</label>
+									</div>
+									<div class="col s12 logBtn">
+									<a class="waves-effect waves-light btn blue darken-1" href="/contacts">Prihlásiť</a>
+									</div>
 								</div>
-								<div class="col s12 logBtn">
-									<a class="waves-effect waves-light btn deep-orange darken-3" href="/admin">Prihlásiť</a>
-								</div>
-							</div>
-						</p>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -24,3 +24,5 @@ reactive-var
 msavin:mongoinspector
 meteorhacks:subs-manager
 d0minikk:materialize-meteor
+percolate:momentum-iron-router
+jquery

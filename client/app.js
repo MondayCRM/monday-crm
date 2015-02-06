@@ -8,7 +8,6 @@ Template.registerHelper('gravatar', function(email, options) {
 });
 
 
-
 _.extend(Blaze.View.prototype,{
   closest: function(searchedViewName, prefix){
     prefix = prefix || 'Template.';

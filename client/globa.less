@@ -1,26 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
 body, html {
-  height: 100%;
-}
-body {
-	background-color: #315481;
-	background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-	background-attachment: fixed;
-	background: url(/images/img1.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 0;
-	margin: 0;
-	font-size: 14px;
-	color: #111;
+	height: 100%;
+	background-color: #f8f8f8;
 }
 
 .no-padding{
 	padding: 0 0 0 0 !important;
+}
+.no-margin{
+	margin: 0 0 0 0 !important;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: #000;
+	background: #d84315;
+	background: rgba(216, 67, 21, .5);
+}
+
+::selection {
+	color: #fff; 
+	background: #d84315;
+}
+
+
+header, main, footer {
+	padding-left: 210px;
+}
+
+@media only screen and (max-width : 992px) {
+	header, main, footer {
+		padding-left: 0;
+	}
+}
+
+ul.side-nav.full, ul.side-nav.fixed{
+	width: 210px;	
+}
+
+ul.sidebar{
+	background-color: #283040 !important;
+	border-right: 1px solid #eee;
+}
+
+ul.sidebar li{
+	padding: 0px !important;
+}
+ul.sidebar li a {
+	font-family: 'Open Sans', sans-serif;
+	color: #8A97AD !important;
+	padding-left: 19px;
+	font-size: .9em !important;
+	transition: all 0.5s linear;
+}
+ul.side-nav.full li, ul.side-nav.fixed li{
+	width: 100%;
+}
+ul.sidebar li a:hover {
+	color: #fff !important;
+	background-color: #333e51 !important;
+	border-left: 3px solid #1976d2 !important;
+	padding-left: 15px;
+	transition: all 0.5s linear;
+}
+
+ul.sidebar li.active a {
+	color: #fff !important;
+	background-color: #232B38;
+	border-left: 3px solid #2196f3;
+	padding-left: 15px;
+
+}
+ul.sidebar hr {
+	margin: 10px 0px;
+	border: 0px;
+	border-top: 1px solid #1F2531;
+	border-bottom: 1px solid #2E3748;
+}
+
+ul.sidebar li a i{
+	margin-right: 10px;
+	font-size: 1.2em;
+}
+ul.side-nav.full li, ul.side-nav.fixed li{
+	line-height: 36px;
+}
+ul.sidebar h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal !important;
+	font-size: .9em;
+	line-height: 1em;
+	color: #53607A;
+	text-transform: uppercase;
+	margin: 20px 15px 10px 15px;
+	font-weight: bold;
 }
