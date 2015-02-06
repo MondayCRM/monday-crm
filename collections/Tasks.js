@@ -1,7 +1,6 @@
 Tasks = new Mongo.Collection('tasks');
 
 
-
 Tasks.attachSchema(new SimpleSchema({
   reference_id: {
     type: String

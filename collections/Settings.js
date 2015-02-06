@@ -1,8 +1,5 @@
 Settings = new Mongo.Collection("settings");
 
-
-
-
 SettingsSchema = new SimpleSchema({
   language: {
     type: String,
