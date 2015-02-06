@@ -1,5 +1,26 @@
 <template name="contactsList">
-	{{#each contacts}}
-		<a href="{{pathFor route='contact' data=this}}">{{name}}</a><br />
-	{{/each}}
+
+	<nav class="top-nav white">
+		<div class="container">
+			<div class="nav-wrapper"><a class="page-title"><i class="mdi-social-people"></i> Kontakty</a></div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="row">
+					{{#each contacts}}
+					<div class="col l4 m6 s12">
+						<div class="card-panel white">
+							<span>
+								<input type="checkbox" id="{{name}}" />
+								<label for="{{name}}"><a href="{{pathFor route='contact' data=this}}">{{name}}</a></label>
+							</span>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
