@@ -1,0 +1,76 @@
+.contactEntry{
+	background-image: url("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c47.0.160.160/p160x160/10354686_10150004552801856_220367501106153455_n.jpg?oh=b85ac8dcf49590768775c943f2bfa6cf&oe=55677C49&__gda__=1431459897_68d32c3e6c8ea4e7159e860efff2d01a");
+	background-position: left center;
+	background-size: 65px 65px;
+	background-repeat: no-repeat;
+	padding: 10px 20px 20px 80px;
+	height: 65px;
+	overflow: hidden;
+
+	span{
+		position: relative;
+		display: block;
+
+		a{
+			color: #62728c;
+			transition: all 0.1s linear;
+
+			&:hover{
+				color: #42A5F5
+			}
+		}
+		.job-position{
+			font-size: 13px;
+		}
+	}
+
+	input[type='checkbox']{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+	}
+}
+
+
+
+.container{
+	.addBtn {
+		padding: 21px;
+		width: 100%;
+		vertical-align: middle;
+
+		a{
+			color: #fff;
+			text-transform: uppercase;
+		}
+		i{
+			line-height: 22.5px;
+			color: #fff;
+			font-size: 1.4em;
+		}
+	}
+	.controls{
+		padding: 1em 0em 1em 0em;
+		margin-bottom: 0px;
+
+		i{
+			color: #9e9e9e;
+		}
+	}
+	.input-field .active{
+		color: #2196f3;
+	}
+	.input-field input:focus + label{
+		color: #2196f3;
+	}
+	input:focus{
+		border-bottom-color: #2196f3;
+		box-shadow: 0 1px 0 0 #2196f3;
+	}
+}
+
+@media only screen and (min-width : 993px) {
+	.container {
+		width: 95%;
+	}
+}

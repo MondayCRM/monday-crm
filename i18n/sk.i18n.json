@@ -1,3 +1,11 @@
 {
-  "sign_in": "Prihlásiť"
+  "sign_in": "Prihlásiť",
+
+  "contacts": "Kontakty",
+
+   "quick_filter": "Rýchle vyhľadávanie",
+
+  "add_contact": "Pridaj kontakt",
+
+  "in_position":"v"
 }

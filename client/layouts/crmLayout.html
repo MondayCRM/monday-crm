@@ -1,12 +1,14 @@
 <template name="crmLayout">
 	<header>
-		<ul id="nav-mobile" class="collapsible side-nav full fixed sidebar">
+		<ul id="nav-mobile" class="side-nav full fixed sidebar">
+			<div class="text-center logo">
+			</div>
 			<hr>
 			<h4>CRM</h4>
 			<li class="bold"><a href="#"><i class="mdi-action-dashboard"></i> Prehľad</a></li>
 			<li class="bold"><a href="#"><i class="mdi-editor-attach-money"></i> Obchody</a></li>
 			<li class="bold"><a href="#"><i class="mdi-action-track-changes"></i> Príležitosti</a></li>
-			<li class="bold active"><a href="#"><i class="mdi-social-people"></i> Kontakty</a></li>
+			<li class="bold active"><a href="/contacts"><i class="mdi-social-people"></i> {{_ "contacts"}}</a></li>
 			<li class="bold"><a href="#"><i class="mdi-file-folder"></i> Dokumenty</a></li>
 			<hr>
 			<li class="bold"><a href="#"><i class="mdi-action-settings-power"></i> Logout</a></li>

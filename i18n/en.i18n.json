@@ -1,3 +1,11 @@
 {
-  "sign_in": "Sign in"
+  "sign_in": "Sign in",
+
+  "contacts": "Contacts",
+
+  "quick_filter": "Quick filter",
+
+  "add_contact": "Add contact",
+
+  "in_position":"of"
 }
