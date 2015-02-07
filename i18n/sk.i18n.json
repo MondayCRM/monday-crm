@@ -5,7 +5,13 @@
 
 	"password": "Heslo",
 
+  "password2": "Kontrola hesla",
+
+  "license": "Číslo licencie",
+
   "sign_in": "Prihlásiť",
+
+  "sign_up": "Vstúpiť",
 
   // VIEWS
 

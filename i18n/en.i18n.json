@@ -5,7 +5,13 @@
 
 	"password": "Password",
 
-  "sign_in": "Sign in",
+  "password2": "Password doublecheck",
+
+  "license": "License code",
+
+  "sign_in": "Log me in",
+
+  "sign_up": "Get in",
 
   // VIEWS
 

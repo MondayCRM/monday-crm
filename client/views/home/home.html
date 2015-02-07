@@ -15,7 +15,7 @@
 						<div class="icon-block login-form">
 							<ul class="tabs">
 								<li class="tab col s6"><a class="active" href="#login"><i class="mdi-action-lock-outline"></i> Login</a></li>
-								<li class="tab col s6"><a><i class="mdi-file-folder-shared"  href="#registration"></i> Signup</a></li>
+								<li class="tab col s6"><a href="#registration"><i class="mdi-file-folder-shared"></i> Signup</a></li>
 							</ul>
 
 							<p class="light" id="login">
@@ -35,8 +35,33 @@
 									</div>
 								</div>
 							</p>
+
 							<p  id="registration">
-								test
+								<div class="row">
+									<div class="input-field col s12">
+										<i class="mdi-action-account-circle prefix"></i>
+										<input id="reg-username" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+										<label for="reg-username">{{_ "username"}}</label>
+									</div>
+									<div class="input-field col s12">
+										<i class="mdi-communication-vpn-key prefix"></i>
+										<input id="reg-password1" type="password" class="validate">
+										<label for="reg-password1">{{_ "password"}}</label>
+									</div>
+									<div class="input-field col s12">
+										<i class="mdi-notification-vpn-lock prefix"></i>
+										<input id="reg-password2" type="password" class="validate">
+										<label for="reg-password2">{{_ "password2"}}</label>
+									</div>
+									<div class="input-field col s12">
+										<i class="mdi-communication-business prefix"></i>
+										<input id="reg-license" type="number" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+										<label for="reg-license">{{_ "license"}}</label>
+									</div>
+									<div class="col s12 logBtn">
+										<a class="waves-effect waves-light btn red darken-4" href="/contacts">{{_ "sign_up"}}</a>
+									</div>
+								</div>
 							</p>
 						</div>
 					</div>
