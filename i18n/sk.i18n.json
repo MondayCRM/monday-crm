@@ -1,9 +1,9 @@
 {
-	"motto": "Inteligentné CRM, ktoré prináša zákazníkov.",
-	
-	"username": "Používatelské meno",
+  "motto": "Inteligentné CRM, ktoré prináša zákazníkov.",
 
-	"password": "Heslo",
+  "username": "Používatelské meno",
+
+  "password": "Heslo",
 
   "password2": "Kontrola hesla",
 
@@ -11,7 +11,7 @@
 
   "sign_in": "Prihlásiť",
 
-  "sign_up": "Vstúpiť",
+  "sign_up": "Registrovať",
 
   // VIEWS
 
@@ -31,5 +31,5 @@
 
   "add_contact": "Pridaj kontakt",
 
-  "in_position":"v"
+  "in_position": "v"
 }

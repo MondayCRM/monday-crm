@@ -1,17 +1,17 @@
 {
-	"motto": "Inteligent CRM, that brings customers.",
+  "motto": "Inteligent CRM, that brings customers.",
 
-	"username": "Username",
+  "username": "Username",
 
-	"password": "Password",
+  "password": "Password",
 
-  "password2": "Password doublecheck",
+  "password2": "Password double check",
 
   "license": "License code",
 
   "sign_in": "Log me in",
 
-  "sign_up": "Get in",
+  "sign_up": "Sign up",
 
   // VIEWS
 
@@ -31,5 +31,5 @@
 
   "add_contact": "Add contact",
 
-  "in_position":"of"
+  "in_position": "at"
 }
