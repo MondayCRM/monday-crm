@@ -8,33 +8,35 @@
 					<div class="col col l6 m6 s12 ">
 						<h2><b>MONDAY</b><span>CRM</span></h2>
 						<blockquote>
-							Inteligentné CRM, ktoré prináša zákazníkov.
+							{{_ "motto"}}
 						</blockquote>
 					</div>
 					<div class="col col l4 offset-l2 m6 s12">
 						<div class="icon-block login-form">
 							<ul class="tabs">
-								<li class="tab col s6"><a class="active"><i class="mdi-action-lock-outline"></i> Login</a></li>
-								<li class="tab col s6"><a><i class="mdi-file-folder-shared"></i> Signup</a></li>
+								<li class="tab col s6"><a class="active" href="#login"><i class="mdi-action-lock-outline"></i> Login</a></li>
+								<li class="tab col s6"><a><i class="mdi-file-folder-shared"  href="#registration"></i> Signup</a></li>
 							</ul>
 
-							<p class="light">
+							<p class="light" id="login">
 								<div class="row">
 									<div class="input-field col s12">
 										<i class="mdi-action-account-circle prefix"></i>
 										<input id="username" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-										<label for="username">Používatelské meno</label>
+										<label for="username">{{_ "username"}}</label>
 									</div>
-
 									<div class="input-field col s12">
 										<i class="mdi-communication-vpn-key prefix"></i>
 										<input id="password" type="password" class="validate">
-										<label for="password">Heslo</label>
+										<label for="password">{{_ "password"}}</label>
 									</div>
 									<div class="col s12 logBtn">
-									<a class="waves-effect waves-light btn blue lighten-1" href="/contacts">{{_ "sign_in"}}</a>
+										<a class="waves-effect waves-light btn blue lighten-1" href="/contacts">{{_ "sign_in"}}</a>
 									</div>
 								</div>
+							</p>
+							<p  id="registration">
+								test
 							</p>
 						</div>
 					</div>

@@ -1,7 +1,25 @@
 {
+	"motto": "Inteligent CRM, that brings customers.",
+
+	"username": "Username",
+
+	"password": "Password",
+
   "sign_in": "Sign in",
 
+  // VIEWS
+
+  "dashboard": "Dashboard",
+
+  "deals": "Deals",
+
+  "opprotunities": "Opportunities",
+
   "contacts": "Contacts",
+
+  "documents": "Documents",
+
+  // END of VIEWS
 
   "quick_filter": "Quick filter",
 

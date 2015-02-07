@@ -1,7 +1,7 @@
 
 Template.home.rendered = function () {
   $('ul.tabs').tabs();
-	$('#particles').particleground({
+  $('#particles').particleground({
 		minSpeedX: 0.1,
 		maxSpeedX: 0.1,
 		minSpeedY: 0.1,
@@ -17,5 +17,5 @@ Template.home.rendered = function () {
 		proximity: 170, 
 		parallax: true,
 		parallaxMultiplier: 17
-	});
+  });
 }
