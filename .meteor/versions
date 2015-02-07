@@ -60,7 +60,9 @@ minifiers@1.1.3
 minimongo@1.0.6
 mobile-status-bar@1.0.2
 momentjs:moment@2.8.4
+monday-base@0.0.0
 monday-i18n@0.0.0
+monday-index-podnikatela-driver@0.0.1
 mongo@1.0.11
 msavin:mongoinspector@2.3.1
 npm-bcrypt@0.7.7

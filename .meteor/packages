@@ -28,5 +28,10 @@ percolate:momentum-iron-router
 jquery
 tap:i18n
 
-monday-i18n
 momentjs:moment
+
+# Monday packages
+monday-base
+monday-i18n
+monday-index-podnikatela-driver
+http
