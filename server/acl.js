@@ -15,4 +15,5 @@ Security.defineMethod("ifCanManageUsers", {
 
 
 Activities.permit(['insert', 'update', 'remove']).ifLoggedIn().apply();
+Settings.permit(['insert', 'update', 'remove']).apply();
 

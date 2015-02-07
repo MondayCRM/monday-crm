@@ -19,6 +19,10 @@ SettingsSchema = new SimpleSchema({
       }
     }
   },
+  indexPodnikatelaToken: {
+    type: String,
+    optional: true
+  }
 });
 
 Settings.attachSchema(SettingsSchema);
