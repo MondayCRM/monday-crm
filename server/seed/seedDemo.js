@@ -32,7 +32,6 @@ Meteor.startup(function() {
 
 
     // insert persons
-    var personId = null;
     for(var i = 1; i <= 40; i++) {
       var randomUser = Fake.user();
       entity = {
@@ -65,12 +64,11 @@ Meteor.startup(function() {
 
 
     // insert deals
-    for(var i = 1; i <= 0; i++) {
+    for(var i = 1; i <= 15; i++) {
       entity = {
         name: Fake.sentence(_.random(2, 7)),
         description: Fake.sentence(_.random(5, 30)),
-        status: Fake.fromArray(dealStatuses),
-        jobPositions_ids: _.sample(jobPositions, _.random(0, 3))
+        status: Fake.fromArray(dealStatuses)
       };
 
       var dealId = Deals.insert(entity);
@@ -78,7 +76,7 @@ Meteor.startup(function() {
 
       // add activities
       var count = _.random(1,7);
-      for(var j = count; j <= 6; j++) {
+      for(var j = count; j <= 0; j++) {
         entity = {
           reference: {
             _id: dealId,

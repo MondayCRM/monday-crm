@@ -12,13 +12,6 @@ Deals.attachSchema(new SimpleSchema({
     type: String,
     defaultValue: Meteor.App.DEAL_STATUS.OPENED,
     allowedValues: dealStatuses
-  },
-  jobPositions_ids: {
-    type: Array,
-    optional: true
-  },
-  "jobPositions_ids.$": {
-    type: String
   }
 }));
 
