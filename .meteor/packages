@@ -27,12 +27,14 @@ d0minikk:materialize-meteor
 percolate:momentum-iron-router
 jquery
 tap:i18n
-
+http
+json
+harrison:papa-parse
 momentjs:moment
 
 # Monday packages
 monday-base
 monday-i18n
+monday-import-csv
 monday-index-podnikatela-driver
-http
-json
+
