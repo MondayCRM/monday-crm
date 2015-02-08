@@ -1,26 +1,11 @@
 <template name="dealsList">
-  <nav class="top-nav white">
-    <div class="container">
-      <div class="row">
-        <div class="col s2 m2 l0">
-          <a href="#" data-activates="nav-mobile" class="button-collapse">
-            <i class="mdi-navigation-menu"></i>
-          </a>
-        </div>
-        <div class="col s10 m8 l12">
-          <div class="nav-wrapper"><a class="page-title"><i class="mdi-editor-attach-money"></i> {{_ "deals"}}</a></div>
-        </div>
-        <div class="col s0 m2 l0">
-        </div>
-      </div>
-    </div>
-  </nav>
+  {{>topNav title="deals" icon="mdi-editor-attach-money"}}
   <div class="container">
     <div class="row">
       <div class="col s12">
         <div class="row">
           {{#each deals}}
-            {{>dealsListEntry}}
+          {{>dealsListEntry}}
           {{/each}}
         </div>
       </div>
@@ -31,10 +16,10 @@
 <template name="dealsListEntry">
   <div class="col l4 m6 s12">
     <div class="card-panel white">
-			<span>
-				<a href="{{pathFor route='deal' data=this}}"><strong>{{name}}</strong></a>
-			</span>
-    </div>
+     <span>
+      <a href="{{pathFor route='deal' data=this}}"><strong>{{name}}</strong></a>
+    </span>
   </div>
+</div>
 </template>
 
