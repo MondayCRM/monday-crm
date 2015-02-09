@@ -8,7 +8,15 @@
 					</a>
 				</div>
 				<div class="col s10 m8 l12">
-					<div class="nav-wrapper"><a class="page-title"><i class="{{icon}}"></i> {{_ title}}</a></div>
+					<div class="nav-wrapper">
+						<a class="page-title"><i class="{{icon}}"></i> 
+							{{#if translate}}
+								{{_ title}}
+							{{else}}
+								{{title}}
+							{{/if}}
+						</a>
+					</div>
 				</div>
 				<div class="col s0 m2 l0">
 				</div>

@@ -1,18 +1,6 @@
 <template name="crmLayout">
 	<header>
-		<ul id="nav-mobile" class="side-nav full fixed sidebar">
-			<div class="text-center logo">
-			</div>
-			<hr>
-			<h4>CRM</h4>
-			<!--<li class="bold {{isActiveRoute regex='^contacts'}}"><a href="#"><i class="mdi-action-dashboard"></i> {{_ "dashboard"}}</a></li>-->
-			<li class="bold {{isActiveRoute regex='^deals'}}"><a href="{{pathFor route='deals'}}"><i class="mdi-editor-attach-money"></i> {{_ "deals"}}</a></li>
-			<!--<li class="bold {{isActiveRoute regex='^contacts'}}"><a href="#"><i class="mdi-action-track-changes"></i> {{_ "opprotunities"}}</a></li>-->
-			<li class="bold {{isActiveRoute regex='^contacts'}}"><a href="{{pathFor route='contacts'}}"><i class="mdi-social-people"></i> {{_ "contacts"}}</a></li>
-			<li class="bold"><a href="#"><i class="mdi-file-folder"></i> {{_ "documents"}}</a></li>
-			<hr>
-			<li class="bold"><a href="#"><i class="mdi-action-settings-power"></i> Logout</a></li>
-		</ul>
+		{{>sideNav}}
 	</header>
 	<main>
 		{{> yield}}
