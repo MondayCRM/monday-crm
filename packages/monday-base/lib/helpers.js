@@ -1,8 +1,3 @@
-// ------------------------------ Router ------------------------------ //
-goTo = function(url){
-  Router.go(url);
-};
-
 // ------------------------------ Settings ------------------------------ //
 
 getSetting = function(setting, defaultValue){
@@ -36,6 +31,13 @@ getTemplate = function (name) {
   // if template has been overwritten, return this; else return template name
   return !!templates[name] ? templates[name] : name;
 };
+
+
+// ------------------------------ Router ------------------------------ //
+goTo = function(url){
+  Router.go(url);
+};
+
 
 
 // http://stackoverflow.com/questions/2631001/javascript-test-for-existence-of-nested-object-key

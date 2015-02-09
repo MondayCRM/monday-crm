@@ -3,10 +3,18 @@ Package.describe({summary: "Monday CRM base package"});
 
 Package.onUse(function (api) {
 
-  api.add_files(['lib/base.js'], ['client', 'server']);
+  api.add_files(['' +
+  'lib/base.js',
+  'lib/helpers.js'
+  ], ['client', 'server']);
 
   api.export([
-    'findCompanyDataServerCallback'
+    'findCompanyDataServerCallback',
+    'getTemplate',
+    'getSetting',
+    'log',
+    'checkNested',
+    'goTo'
   ]);
 
 });
