@@ -2,6 +2,11 @@ Contacts = new Mongo.Collection('contacts');
 
 
 ContactsSchema = new SimpleSchema([{
+  type: {
+    type: String,
+    defaultValue: Meteor.App.CONTACTS_TYPES.COMPANY,
+    allowedValues: contactsTypes
+  },
   name: {
     type: String
   },
