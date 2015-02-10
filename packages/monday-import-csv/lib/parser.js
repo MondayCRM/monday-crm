@@ -41,7 +41,7 @@ prepareForInsert = function(entity) {
   var newEntity = {}, newKey = null;
   _.each(entity, function(value, key) {
     newKey = key;
-    if(S(newKey).contains('.')) {
+    if(s(newKey).include('.')) {
       newKey = newKey.split('.');
       assignToObject(newEntity, newKey, value);
     } else {
