@@ -1,8 +1,8 @@
 <template name="importCsv">
-  <h1 class="header">Import CSV</h1>
+  <div class="card-panel">
+    <h1 class="blue-text">Import CSV</h1>
 
-  <div class="row">
-    <form id="import-csv-form" class="col s12">
+    <form id="import-csv-form">
       <div class="row">
         <div class="input-field col s12">
           <textarea class="materialize-textarea" name="csv">"CONTENT TYPE","TITLE","ABBR","ISSN","e-ISSN","PUBLICATION RANGE: START","PUBLICATION RANGE: LATEST PUBLISHED","SHORTCUT URL","ARCHIVE URL"
@@ -24,23 +24,40 @@
           <label>Textarea</label>
         </div>
       </div>
-      <button class="waves-effect waves-light btn" type="submit"><i class="mdi-file-cloud left"></i>button</button>
+      <button class="waves-effect waves-light btn" type="submit"><i class="mdi-editor-format-line-spacing left"></i>Preview</button>
     </form>
-  </div>
 
-
-  <div class="card-panel">
-    <table class="bordered hoverable">
-      <tbody>
-      {{#each columnHeaders}}
-        <tr>
-          <td>{{this}}</td>
-          {{#each previewRow this}}
-            <td>{{this}}</td>
+    {{#if columnHeaders}}
+      <form id="process-csv-data">
+        <table class="bordered hoverable">
+          <tbody>
+          {{#each columnHeaders}}
+            <tr>
+              <td>
+                <select name="{{this}}" class="browser-default">
+                  <option value="">-omit-</option>
+                  {{#each fields}}
+                    <option value="{{this}}">{{labelFor this}}</option>
+                  {{/each}}
+                </select>
+              </td>
+              {{#each previewRow this}}
+                <td>{{this}}</td>
+              {{/each}}
+            </tr>
           {{/each}}
-        </tr>
-      {{/each}}
-      </tbody>
-    </table>
+          </tbody>
+        </table>
+        <div class="section">
+          <button class="waves-effect waves-light btn" type="submit"><i class="mdi-file-cloud-download left"></i>{{processButtonText}}</button>
+        </div>
+        {{#with processErrors}}
+          <div class="red-text">Errors:</div>
+          {{#each this}}
+            {{this}}<br/>
+          {{/each}}
+        {{/with}}
+      </form>
+    {{/if}}
   </div>
 </template>

@@ -54,4 +54,27 @@ checkNested = function(obj /*, level1, level2, ... levelN*/) {
   return true;
 };
 
+// http://stackoverflow.com/questions/5484673/javascript-how-to-dynamically-create-nested-objects-using-object-names-given-by
+assignToObject = function(obj, keyPath, value) {
+  var lastKeyIndex = keyPath.length- 1, key;
+  for (var i = 0; i < lastKeyIndex; ++ i) {
+    key = keyPath[i];
+    if (!(key in obj))
+      obj[key] = {};
+    obj = obj[key];
+  }
+  obj[keyPath[lastKeyIndex]] = value;
+};
+
+//http://stackoverflow.com/questions/679915/how-do-i-test-for-an-empty-javascript-object
+isObjectEmpty = function(obj) {
+  for(var prop in obj) {
+    if(obj.hasOwnProperty(prop))
+      return false;
+  }
+
+  return true;
+}
+
+
 log = console.log.bind(console);

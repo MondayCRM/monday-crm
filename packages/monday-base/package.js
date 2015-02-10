@@ -14,6 +14,8 @@ Package.onUse(function (api) {
     'getSetting',
     'log',
     'checkNested',
+    'assignToObject',
+    'isObjectEmpty',
     'goTo'
   ]);
 
