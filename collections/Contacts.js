@@ -11,14 +11,17 @@ ContactsSchema = new SimpleSchema([{
   },
   companyId: {
     type: String,
+    label: 'Company Id',
     optional: true
   },
   taxId: {
     type: String,
+    label: 'Tax Id',
     optional: true
   },
   vatId: {
     type: String,
+    label: 'Vat Id',
     optional: true
   },
 
