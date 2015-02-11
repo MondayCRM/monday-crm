@@ -1,0 +1,23 @@
+<template name="signUpForm">
+  <form id="sign-up-form" class="row">
+    <div class="input-field col s12">
+      <i class="mdi-action-account-circle prefix"></i>
+      <input name="name" id="up-name" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <label for="up-name">{{_ "name"}}</label>
+    </div>
+    <div class="input-field col s12">
+      <i class="mdi-communication-email prefix"></i>
+      <input name="email" id="up-email" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <label for="up-email">{{_ "email"}}</label>
+    </div>
+    <div class="input-field col s12">
+      <i class="mdi-communication-vpn-key prefix"></i>
+      <input name="password" id="up-password" type="password" class="validate">
+      <label for="up-password">{{_ "password"}}</label>
+    </div>
+    <div class="col s12 logBtn">
+      <span class="red-text">{{errorMessage}}</span>
+      <button type="submit" class="waves-effect waves-light btn red darken-4">{{_ "sign_up"}}</button>
+    </div>
+  </form>
+</template>

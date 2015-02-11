@@ -5,8 +5,17 @@ _.each(Meteor.App.ROLES, function(value) {
   roles.push(value);
 });
 
-Meteor.users.attachSchema(new SimpleSchema({
+
+UserProfileSchema = new SimpleSchema({
   name: {
+    type: String,
+    optional: true
+  }
+});
+
+
+Meteor.users.attachSchema(new SimpleSchema({
+  username: {
     type: String,
     optional: true
   },
@@ -25,6 +34,10 @@ Meteor.users.attachSchema(new SimpleSchema({
   },
   createdAt: {
     type: Date
+  },
+  profile: {
+    type: UserProfileSchema,
+    optional: true
   },
   services: {
     type: Object,

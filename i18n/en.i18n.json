@@ -2,6 +2,9 @@
   "motto": "Inteligent CRM, that brings customers.",
 
   "username": "Username",
+  "email_or_username": "Email or username",
+  "name": "Name",
+  "email": "Email",
 
   "password": "Password",
 

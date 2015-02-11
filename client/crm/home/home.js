@@ -1,12 +1,12 @@
 
 Template.home.rendered = function () {
-  $('ul.tabs').tabs();
+
   $('#particles').particleground({
 		minSpeedX: 0.1,
 		maxSpeedX: 0.1,
 		minSpeedY: 0.1,
 		maxSpeedY: 0.1,
-		directionX: 'center', 
+		directionX: 'center',
 		directionY: 'center',
 		density: 10000,
 		dotColor: '#fafced',
@@ -14,8 +14,13 @@ Template.home.rendered = function () {
 		particleRadius: 4,
 		lineWidth: .4,
 		curvedLines: false,
-		proximity: 170, 
+		proximity: 170,
 		parallax: true,
 		parallaxMultiplier: 17
   });
-}
+};
+
+
+Template[getTemplate('accountTabs')].rendered = function() {
+  $('ul.tabs').tabs();
+};
