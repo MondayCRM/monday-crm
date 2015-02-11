@@ -17,8 +17,18 @@ Template[getTemplate('contactDetail')].events({
     Meteor.call('findCompanyData', search, function (error, result) {
     });
   },
-  'click .toggle-type': function (event, instance) {
-    var type = event.currentTarget.dataset.type;
+  'change #type': function (event) {
+    var type = event.target.value;
     Contacts.update(this._id, {$set: {type: type}});
+    console.log(Contacts.find(this._id));
+  },
+  'click [data-role="button"]': function(e) {
+    if ($(e.target).text() == "edit"){
+      $(e.target).text("save");
+      Session.set("editing", true);
+    }else{
+      $(e.target).text("edit");
+      Session.set("editing", false);
+      }
   }
 });

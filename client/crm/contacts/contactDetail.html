@@ -3,35 +3,43 @@
   {{>topNavigation translate=false title=name icon="mdi-social-person"}}
   {{/with}}
   {{#with contact}}
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m6">
-          <a class="waves-effect waves-light btn toggle-type teal {{typeIs 'company' '' 'lighten-3'}}" data-type="company"><i class="mdi-social-domain left"></i>Company</a>
-          <a class="waves-effect waves-light btn toggle-type teal {{typeIs 'person' '' 'lighten-3'}}" data-type="person"><i class="mdi-social-person-outline left"></i>Person</a>
-          <form>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="name" type="text" value="{{name}}">
-                <label for="name" class="active">Name</label>
-              </div>
-
-              <div class="input-field col s12">
-                <textarea class="materialize-textarea">Toto je nejaky priklad description bla bla bla ... gas gasgasf </textarea>
-                <label class="active">Description</label>
-              </div>
-
-              <div class="input-field col s12 {{typeIs 'company' '' 'hide'}}">
-                <input id="name" type="text" value="{{companyId}}">
-                <label for="name" class="active">Company ID</label>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <form>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="type" class="active">Type</label>
+              <select id="type">
+                <option value="person"  selected="{{typeIs 'person' '' ''}}" data-type="person">Person</option>
+                <option value="company"  selected="{{typeIs 'company' '' ''}}" data-type="company">Company</option>
+              </select>
 
             </div>
+            <div class="input-field col s12">
+              <input id="name" type="text" value="{{name}}">
+              <label for="name" class="active">Name</label>
+            </div>
 
+            <div class="input-field col s12">
+              <textarea class="materialize-textarea">Toto je nejaky priklad description bla bla bla ... gas gasgasf </textarea>
+              <label class="active">Description</label>
+            </div>
 
-          </form>
+            <div class="input-field col s12 {{typeIs 'company' '' 'hide'}}">
+              <input id="name" type="text" value="{{companyId}}">
+              <label for="name" class="active">Company ID</label>
+            </div>
+          </div>
+        </form>
 
+      </div>
+      <div class="col s12 m6">
+        <div class="row">
+        <a class="waves-effect waves-light btn grey lighten-5 blue-text text-lighten-1" data-role="button"><i class="mdi-image-edit left"></i>{{_ "edit"}}</a>
         </div>
       </div>
     </div>
+  </div>
   {{/with}}
 </template>

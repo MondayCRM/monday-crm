@@ -23,6 +23,9 @@
 
   "contacts": "Contacts",
 
+  // CONTACTDETAIL
+      "edit": "Edit",
+
   "documents": "Documents",
 
   // END of VIEWS
