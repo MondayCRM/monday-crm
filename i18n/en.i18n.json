@@ -29,6 +29,16 @@
   // CONTACTDETAIL
       "edit": "Edit",
 
+      "description": "Description",
+
+      "companyid" : "Company ID",
+
+      "taxid" : "Tax ID",
+
+      "vatid" : "Vat ID",
+
+      "subtype": "Company typ",
+
   "documents": "Documents",
 
   // END of VIEWS

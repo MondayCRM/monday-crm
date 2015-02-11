@@ -3,40 +3,72 @@
   {{>topNavigation translate=false title=name icon="mdi-social-person"}}
   {{/with}}
   {{#with contact}}
-  <div class="container">
+  <div class="container content contactDetail">
     <div class="row">
       <div class="col s12 m6">
         <form>
           <div class="row">
+            <div class="col s12">
+              <div class="row no-bottom-margin">
+                <div class="col s12 m3 profile-picture">
+                  <img class="" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c47.0.160.160/p160x160/10354686_10150004552801856_220367501106153455_n.jpg?oh=b85ac8dcf49590768775c943f2bfa6cf&oe=55677C49&__gda__=1431459897_68d32c3e6c8ea4e7159e860efff2d01a" />
+                </div>
+                <div class="input-field col s12 m9">
+                  <label for="type" class="">Type</label>
+                  <select id="type">
+                    <option value="person"  selected="{{typeIs 'person' '' ''}}" data-type="person">Person</option>
+                    <option value="company"  selected="{{typeIs 'company' '' ''}}" data-type="company">Company</option>
+                  </select>
+                </div>
+                <div class="input-field col s12 m9">
+                  <input id="name" type="text" value="{{name}}">
+                  <label for="name" class="">{{typeIs 'company' 'Business' 'Full'}} name</label>
+                </div>
+              </div>
+
+
+            </div>
+
             <div class="input-field col s12">
-              <label for="type" class="active">Type</label>
-              <select id="type">
-                <option value="person"  selected="{{typeIs 'person' '' ''}}" data-type="person">Person</option>
-                <option value="company"  selected="{{typeIs 'company' '' ''}}" data-type="company">Company</option>
+              <label class="" for="description">{{_ "description"}}</label>
+              <textarea class="materialize-textarea" id="descirption">Toto je nejaky priklad description bla bla bla ... gas gasgasf </textarea>
+            </div>
+
+            <div class="input-field col m6 s12 {{typeIs 'company' '' 'hide'}}">
+              <label for="companyid" class="">{{_ "companyid"}}</label>
+              <input id="companyid" type="text" value="{{companyId}}">
+            </div>
+
+            <div class="input-field col m6 s12 {{typeIs 'company' '' 'hide'}}">
+              <label for="tax" class="">{{_ "taxid"}}</label>
+              <input id="tax" type="text" value="{{companyId}}">
+            </div>
+
+            <div class="input-field col m6 s12 {{typeIs 'company' '' 'hide'}}">
+              <label for="vat" class="">{{_ "vatid"}}</label>
+              <input id="vat" type="text" value="{{companyId}}">
+            </div>
+
+            <div class="input-field col m6 s12 {{typeIs 'company' '' 'hide'}}">
+              <label for="subtype" class="">{{_ "subtype"}}</label>
+              <select id="subtype">
+                <option value="person">Živnostník</option>
+                <option value="person">Verejná</option>
+                <option value="company">Komanditná</option>
+                <option value="company">s.r.o</option>
+                <option value="company">Akciová</option>
+                <option value="company">Družstvo</option>
               </select>
-
-            </div>
-            <div class="input-field col s12">
-              <input id="name" type="text" value="{{name}}">
-              <label for="name" class="active">Name</label>
             </div>
 
-            <div class="input-field col s12">
-              <textarea class="materialize-textarea">Toto je nejaky priklad description bla bla bla ... gas gasgasf </textarea>
-              <label class="active">Description</label>
-            </div>
 
-            <div class="input-field col s12 {{typeIs 'company' '' 'hide'}}">
-              <input id="name" type="text" value="{{companyId}}">
-              <label for="name" class="active">Company ID</label>
-            </div>
           </div>
         </form>
 
       </div>
       <div class="col s12 m6">
         <div class="row">
-        <a class="waves-effect waves-light btn grey lighten-5 blue-text text-lighten-1" data-role="button"><i class="mdi-image-edit left"></i>{{_ "edit"}}</a>
+
         </div>
       </div>
     </div>

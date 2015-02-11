@@ -29,6 +29,16 @@
   // CONTACTDETAIL
       "edit": "Upraviť",
 
+      "description": "Popis",
+
+      "companyid" : "IČO",
+
+      "taxid" : "DIČ",
+
+      "vatid" : "IČDPH",
+
+      "subtype": "Typ spoločnosti",
+
   "documents": "Dokumenty",
 
   // END of VIEWS

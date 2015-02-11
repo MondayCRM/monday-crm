@@ -26,7 +26,7 @@ reactive-var
 msavin:mongoinspector
 meteorhacks:subs-manager
 d0minikk:materialize-meteor
-percolate:momentum-iron-router
+percolate:momentum
 jquery
 tap:i18n
 http
