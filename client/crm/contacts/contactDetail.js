@@ -1,5 +1,15 @@
 Template[getTemplate('contactDetail')].rendered = function () {
   $('select').material_select();
+  $('.dropdown-button').dropdown({
+    inDuration: 300,
+    outDuration: 225,
+    constrain_width: true, 
+    hover: false,
+    alignment: 'left',
+    gutter: 0,
+    belowOrigin: false
+  }
+  );
 };
 
 Template[getTemplate('contactDetail')].helpers({

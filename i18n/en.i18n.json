@@ -31,6 +31,8 @@
 
       "description": "Description",
 
+      "billing_info": "Billing informations",
+
       "companyid" : "Company ID",
 
       "taxid" : "Tax ID",
@@ -38,6 +40,20 @@
       "vatid" : "Vat ID",
 
       "subtype": "Company typ",
+
+      "account_number" : "Account number",
+
+      "street": "Street",
+
+      "adress": "Adress",
+
+      "zip": "ZIP code",
+
+      "city": "City",
+
+      "country": "Country",
+
+      "contact_info": "Contact informations",
 
   "documents": "Documents",
 

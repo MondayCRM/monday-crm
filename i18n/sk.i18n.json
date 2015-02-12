@@ -31,6 +31,8 @@
 
       "description": "Popis",
 
+      "billing_info": "Fakturačné údaje",
+
       "companyid" : "IČO",
 
       "taxid" : "DIČ",
@@ -38,6 +40,20 @@
       "vatid" : "IČDPH",
 
       "subtype": "Typ spoločnosti",
+
+      "account_number" : "Číslo účtu",
+
+      "adress": "Adresa",
+
+      "street": "Ulica",
+
+      "zip": "PSČ",
+
+      "city": "Mesto",
+
+      "country": "Krajina",
+
+      "contact_info": "Kontaktné údaje",
 
   "documents": "Dokumenty",
 

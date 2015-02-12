@@ -9,6 +9,13 @@
         <form>
           <div class="row">
             <div class="col s12">
+              <div class="row">
+                <div class="col s12">
+                  <strong>Basic information</strong>
+                </div>
+              </div>
+            </div>
+            <div class="col s12">
               <div class="row no-bottom-margin">
                 <div class="col s12 m3 profile-picture">
                   <img class="" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c47.0.160.160/p160x160/10354686_10150004552801856_220367501106153455_n.jpg?oh=b85ac8dcf49590768775c943f2bfa6cf&oe=55677C49&__gda__=1431459897_68d32c3e6c8ea4e7159e860efff2d01a" />
@@ -34,6 +41,13 @@
               <textarea class="materialize-textarea" id="descirption">Toto je nejaky priklad description bla bla bla ... gas gasgasf </textarea>
             </div>
 
+            <div class="col s12 {{typeIs 'company' '' 'hide'}}">
+              <div class="row">
+                <div class="col s12">
+                  <strong>{{_ "billing_info"}}</strong>
+                </div>
+              </div>
+            </div>
             <div class="input-field col m6 s12 {{typeIs 'company' '' 'hide'}}">
               <label for="companyid" class="">{{_ "companyid"}}</label>
               <input id="companyid" type="text" value="{{companyId}}">
@@ -60,6 +74,69 @@
                 <option value="company">Družstvo</option>
               </select>
             </div>
+
+            <div class="input-field col s12 {{typeIs 'company' '' 'hide'}}">
+              <label for="account_number" class="">{{_ "account_number"}}</label>
+              <input id="account_number" type="text" value="">
+            </div>
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s12">
+                  <strong>{{_ "contact_info"}}</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-field col s5">
+              <i class="mdi-communication-phone prefix"></i>
+              <input id="icon_telephone" type="text" value="Osobne cislo">
+            </div>
+            <div class="input-field col s7">
+              <input id="icon_telephone" type="tel" class="validate" value="0907 058 059">
+            </div>
+
+            <div class="input-field col s12 right-align">
+              <a class="dropdown-button btn-small btn-flat blue-text text-lighten-1" href="#" data-beloworigin="false" data-activates="dropdown1"><i class="mdi-content-add-circle-outline left"></i> Add entry</a>
+            </div>
+
+            <ul id="dropdown1" class="dropdown-content  blue-text text-lighten-1">
+              <li><a href="#!"><i class="mdi-hardware-phone-iphone"></i> Mobile</a></li>
+              <li><a href="#!"><i class="mdi-communication-phone"></i> Phone</a></li>
+              <li><a href="#!"><i class="mdi-communication-email"></i> Email</a></li>
+              <li><a href="#!"><i class="mdi-content-link"></i> Link</a></li>
+            </ul>
+
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s12">
+                  <strong>{{_ "adress"}}</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-field col s12">
+              <label for="street" class="">{{_ "street"}}</label>
+              <input id="street" type="text" value="">
+            </div>
+
+            <div class="input-field col s4">
+              <label for="zip" class="">{{_ "zip"}}</label>
+              <input id="zip" type="text" value="">
+            </div>
+
+            <div class="input-field col s8">
+              <label for="city" class="">{{_ "city"}}</label>
+              <input id="city" type="text" value="">
+            </div>
+
+            <div class="input-field col s12">
+              <label for="country" class="">{{_ "country"}}</label>
+              <input id="country" type="text" value="">
+            </div>
+
+
 
 
           </div>

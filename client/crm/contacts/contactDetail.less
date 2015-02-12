@@ -1,5 +1,14 @@
 .contactDetail{
 
+	strong{
+		color: #8A97AD !important;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.dropdown-content{
+		display: none;
+	}
+
 	.profile-picture{
 		img{
 			max-width: 100%;
@@ -16,16 +25,32 @@
 		height: 2.6rem;
 	}
 
-	.input-field label{
-		-webkit-transform: translateY(-130%);
-		-moz-transform: translateY(-130%);
-		-ms-transform: translateY(-130%);
-		-o-transform: translateY(-130%);
-		transform: translateY(-130%);
-		font-size: 0.9rem;
-		color: #bbb;
+	ul.dropdown-content{
+		li{
+			a{
+				color: #2196f3 !important;
+			}
+		}
 	}
-	.select-wrapper span.select-dropdown, input[type=text], textarea{
+
+	.input-field{
+		i.prefix{
+			color: #bbb;
+			font-size: 1.7rem;
+			text-align: center;
+		}
+
+		label{
+			-webkit-transform: translateY(-130%);
+			-moz-transform: translateY(-130%);
+			-ms-transform: translateY(-130%);
+			-o-transform: translateY(-130%);
+			transform: translateY(-130%);
+			font-size: 0.9rem;
+			color: #bbb;
+		}
+	}
+	.select-wrapper span.select-dropdown, input[type=text], input[type=tel], textarea{
 		border-bottom-color: #eee;
 	}
 }
