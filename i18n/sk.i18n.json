@@ -29,6 +29,12 @@
   // CONTACTDETAIL
       "edit": "Upraviť",
 
+      "basic_information": "Základné informácie",
+
+      "person": "Osoba",
+
+      "company": "Spoločnosť",
+
       "description": "Popis",
 
       "billing_info": "Fakturačné údaje",
@@ -43,6 +49,16 @@
 
       "account_number" : "Číslo účtu",
 
+      "add_entry": "Pridaj položku",
+
+      "mobile": "Mobil",
+
+      "phone": "Telefón",
+
+      "email": "Email",
+
+      "link": "Odkaz",
+
       "adress": "Adresa",
 
       "street": "Ulica",
@@ -54,6 +70,8 @@
       "country": "Krajina",
 
       "contact_info": "Kontaktné údaje",
+
+      "job_position": "Pracovná pozícia",
 
   "documents": "Dokumenty",
 

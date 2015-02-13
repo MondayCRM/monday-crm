@@ -29,6 +29,12 @@
   // CONTACTDETAIL
       "edit": "Edit",
 
+      "basic_information":"Basic informations",
+
+      "person": "Person",
+
+      "company": "Company",
+
       "description": "Description",
 
       "billing_info": "Billing informations",
@@ -43,6 +49,16 @@
 
       "account_number" : "Account number",
 
+      "add_entry": "Add entry",
+
+      "mobile": "Mobile",
+
+      "phone": "Phone",
+
+      "email": "Email",
+
+      "link": "Link",
+
       "street": "Street",
 
       "adress": "Adress",
@@ -54,6 +70,8 @@
       "country": "Country",
 
       "contact_info": "Contact informations",
+
+      "job_position": "Job position",
 
   "documents": "Documents",
 

@@ -5,13 +5,13 @@
   {{#with contact}}
   <div class="container content contactDetail">
     <div class="row">
-      <div class="col card s12 m6">
+      <div class="col s12 m6">
         <form>
-          <div class="row">
+          <div class="row card">
             <div class="col s12">
               <div class="row">
                 <div class="col s12">
-                  <strong>Basic information</strong>
+                  <strong>{{_ "basic_information"}}</strong>
                 </div>
               </div>
             </div>
@@ -21,15 +21,15 @@
                   <img class="" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c47.0.160.160/p160x160/10354686_10150004552801856_220367501106153455_n.jpg?oh=b85ac8dcf49590768775c943f2bfa6cf&oe=55677C49&__gda__=1431459897_68d32c3e6c8ea4e7159e860efff2d01a" />
                 </div>
                 <div class="input-field col s12 m9">
-                  <label for="type" class="">Type</label>
-                  <select id="type">
-                    <option value="person"  selected="{{typeIs 'person' '' ''}}" data-type="person">Person</option>
-                    <option value="company"  selected="{{typeIs 'company' '' ''}}" data-type="company">Company</option>
-                  </select>
-                </div>
-                <div class="input-field col s12 m9">
                   <input id="name" type="text" value="{{name}}">
                   <label for="name" class="">{{typeIs 'company' 'Business' 'Full'}} name</label>
+                </div>
+                <div class="input-field col s12 m9">
+                  <label for="type" class="">Type</label>
+                  <select id="type">
+                    <option value="person"  selected="{{typeIs 'person' '' ''}}" data-type="person">{{_ "person"}}</option>
+                    <option value="company"  selected="{{typeIs 'company' '' ''}}" data-type="company">{{_ "company"}}</option>
+                  </select>
                 </div>
               </div>
 
@@ -97,14 +97,14 @@
             </div>
 
             <div class="input-field col s12 right-align">
-              <a class="dropdown-button btn-small btn-flat blue-text text-lighten-1" href="#" data-beloworigin="false" data-activates="dropdown1"><i class="mdi-content-add-circle-outline left"></i> Add entry</a>
+              <a class="dropdown-button btn-small btn-flat blue-text text-lighten-1" href="#" data-beloworigin="false" data-activates="dropdown1"><i class="mdi-content-add-circle-outline left"></i>{{_ "add_entry"}}</a>
             </div>
 
             <ul id="dropdown1" class="dropdown-content  blue-text text-lighten-1">
-              <li><a href="#!"><i class="mdi-hardware-phone-iphone"></i> Mobile</a></li>
-              <li><a href="#!"><i class="mdi-communication-phone"></i> Phone</a></li>
-              <li><a href="#!"><i class="mdi-communication-email"></i> Email</a></li>
-              <li><a href="#!"><i class="mdi-content-link"></i> Link</a></li>
+              <li><a href="#!"><i class="mdi-hardware-phone-iphone"></i> {{_ "mobile"}}</a></li>
+              <li><a href="#!"><i class="mdi-communication-phone"></i> {{_ "phone"}}</a></li>
+              <li><a href="#!"><i class="mdi-communication-email"></i> {{_ "email"}}</a></li>
+              <li><a href="#!"><i class="mdi-content-link"></i> {{_ "link"}}</a></li>
             </ul>
 
 
@@ -136,19 +136,34 @@
               <input id="country" type="text" value="">
             </div>
 
-
-
-
           </div>
         </form>
 
       </div>
       <div class="col s12 m6">
-        <div class="row">
 
+        <div class="row card  {{typeIs 'person' '' 'hide'}}">
+
+         <div class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <strong>{{_ "job_position"}}</strong>
+            </div>
+          </div>
         </div>
+
+        <div class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <strong>{{_ "contact_info"}}</strong>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
-  {{/with}}
+</div>
+{{/with}}
 </template>
