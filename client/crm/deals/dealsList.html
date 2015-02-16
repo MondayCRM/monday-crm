@@ -1,5 +1,5 @@
-<template name="dealsList">
-  {{>topNavigation title="deals" translate=true icon="mdi-editor-attach-money"}}
+<template name="leadsList">
+  {{>topNavigation title="leads" translate=true icon="mdi-editor-attach-money"}}
   <div class="container">
     <div class="row controls">
       <div class="input-field col s12">
@@ -11,8 +11,8 @@
     <div class="row">
       <div class="col s12">
         <div class="row">
-          {{#each deals}}
-          {{>dealsListEntry}}
+          {{#each leads}}
+          {{>leadsListEntry}}
           {{/each}}
         </div>
       </div>
@@ -20,11 +20,11 @@
   </div>
 </template>
 
-<template name="dealsListEntry">
+<template name="leadsListEntry">
   <div class="col l4 m6 s12">
     <div class="card-panel white">
      <span>
-      <a href="{{pathFor route='deal' data=this}}"><strong>{{name}}</strong></a>
+      <a href="{{pathFor route='lead' data=this}}"><strong>{{name}}</strong></a>
     </span>
   </div>
 </div>

@@ -1,7 +1,7 @@
-Deals = new Mongo.Collection('deals');
+Leads = new Mongo.Collection('leads');
 
 
-Deals.attachSchema(new SimpleSchema({
+Leads.attachSchema(new SimpleSchema({
   name: {
     type: String
   },
@@ -11,16 +11,16 @@ Deals.attachSchema(new SimpleSchema({
   status: {
     type: String,
     defaultValue: Meteor.App.DEAL_STATUS.OPENED,
-    allowedValues: dealStatuses
+    allowedValues: leadStatuses
   }
 }));
 
 
-Deals.helpers({
+Leads.helpers({
   getJobPositions: function() {
     return JobPositions.find({_id: {$in: this.jobPositions_ids}});
   },
   getActivities: function() {
-    return Activities.find({reference: {_id: this._id, collection: 'Deals'}});
+    return Activities.find({reference: {_id: this._id, collection: 'Leads'}});
   }
 });

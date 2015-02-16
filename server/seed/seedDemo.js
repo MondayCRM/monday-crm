@@ -16,7 +16,7 @@ Meteor.startup(function() {
     // remove data
     Tasks.remove({});
     Activities.remove({});
-    Deals.remove({});
+    Leads.remove({});
     JobPositions.remove({});
     Contacts.remove({});
     Settings.remove({});
@@ -28,7 +28,7 @@ Meteor.startup(function() {
 
     var contacts = [];
     var jobPositions = [];
-    var deals = [];
+    var leads = [];
 
 
     // insert persons
@@ -63,24 +63,24 @@ Meteor.startup(function() {
 
 
 
-    // insert deals
+    // insert leads
     for(var i = 1; i <= 15; i++) {
       entity = {
         name: Fake.sentence(_.random(2, 7)),
         description: Fake.sentence(_.random(5, 30)),
-        status: Fake.fromArray(dealStatuses)
+        status: Fake.fromArray(leadStatuses)
       };
 
-      var dealId = Deals.insert(entity);
-      deals.push(dealId);
+      var leadId = Leads.insert(entity);
+      leads.push(leadId);
 
       // add activities
       var count = _.random(1,7);
       for(var j = count; j <= 0; j++) {
         entity = {
           reference: {
-            _id: dealId,
-            collection: 'Deals'
+            _id: leadId,
+            collection: 'Leads'
           },
           type: _.sample(activityTypes),
           description: Fake.sentence(_.random(3, 12))
@@ -96,7 +96,7 @@ Meteor.startup(function() {
     for(var i = 1; i <= 0; i++) {
       createTask(_.sample(companies));
       createTask(_.sample(persons));
-      createTask(_.sample(deals));
+      createTask(_.sample(leads));
     }
 
     console.log('> seedDemo end.');

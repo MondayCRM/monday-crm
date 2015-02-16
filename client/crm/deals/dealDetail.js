@@ -1,12 +1,12 @@
-Template.deal_detail.events({
+Template.lead_detail.events({
     'click .new-action': function(e, instance) {
         e.preventDefault();
 
-        var deal = instance.data.deal;
+        var lead = instance.data.lead;
         Activities.insert({
             reference: {
-                _id: deal._id,
-                collection: 'Deals'
+                _id: lead._id,
+                collection: 'Leads'
             }
         });
     }
