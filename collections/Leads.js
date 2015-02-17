@@ -12,6 +12,9 @@ Leads.attachSchema(new SimpleSchema({
     type: String,
     defaultValue: Meteor.App.LEAD_STATUS.OPENED,
     allowedValues: leadStatuses
+  },
+  progress: {
+    type: Number
   }
 }));
 

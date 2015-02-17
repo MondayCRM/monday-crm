@@ -74,6 +74,7 @@ ordered-dict@1.0.2
 percolate:momentum@0.7.2
 percolate:velocityjs@1.2.1_1
 random@1.0.2
+rcy:nouislider@7.0.7_2
 reactive-dict@1.0.5
 reactive-var@1.0.4
 reload@1.1.2

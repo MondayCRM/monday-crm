@@ -5,6 +5,7 @@
     <div class="col s6">
       <div class="card">
         <div class="card-content row">
+          <div id="slider-step"></div>
           {{# autoForm collection="Leads" doc=lead id="editLead" type="update" template="plain"}}
             {{> afQuickField name='title'}}
             {{> afQuickField name='description' type='textarea'}}
