@@ -1,4 +1,4 @@
-Template.lead_detail.events({
+Template.leadDetail.events({
     'click .new-action': function(e, instance) {
         e.preventDefault();
 

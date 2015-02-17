@@ -2,7 +2,7 @@ Leads = new Mongo.Collection('leads');
 
 
 Leads.attachSchema(new SimpleSchema({
-  name: {
+  title: {
     type: String
   },
   description: {
@@ -10,7 +10,7 @@ Leads.attachSchema(new SimpleSchema({
   },
   status: {
     type: String,
-    defaultValue: Meteor.App.DEAL_STATUS.OPENED,
+    defaultValue: Meteor.App.LEAD_STATUS.OPENED,
     allowedValues: leadStatuses
   }
 }));

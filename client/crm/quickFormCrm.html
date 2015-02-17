@@ -1,0 +1,66 @@
+<template name="quickForm_crm">
+  {{#autoForm this.qfAutoFormContext}}
+    {{> afQuickFields id-prefix=idPrefix}}
+    {{#if qfShouldRenderButton}}
+      <div class="form-group">
+        <button type="submit" {{submitButtonAtts}}>
+          {{#with ../atts.buttonContent}}
+            {{this}}
+          {{else}}
+            Submit
+          {{/with}}
+        </button>
+      </div>
+    {{/if}}
+  {{/autoForm}}
+</template>
+
+
+<template name="afFormGroup_crm">
+  <div class="input-field col s12 {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+    {{#unless this.skipLabel}}
+      <label {{this.afFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+    {{/unless}}
+    {{> afFieldInput customAfFieldInputAtts}}
+    <span>{{{afFieldMessage name=this.atts.name}}}</span>
+  </div>
+</template>
+
+<template name="afObjectField_crm">
+  <fieldset>
+    {{#with afFieldLabelText name=this.atts.name}}
+      <legend>{{this}}</legend>
+    {{/with}}
+    {{> afQuickFields name=this.atts.name}}
+  </fieldset>
+</template>
+
+<template name="afArrayField_crm">
+  <fieldset>
+    <legend>{{afFieldLabelText name=this.atts.name}}</legend>
+    {{#if afFieldIsInvalid name=this.atts.name}}
+      <div class="autoform-array-field-error">
+        {{{afFieldMessage name=this.atts.name}}}
+      </div>
+    {{/if}}
+    {{#afEachArrayItem name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
+      <div class="autoform-array-item">
+        {{> afQuickField name=this.name label=false}}
+        {{#if afArrayFieldHasMoreThanMinimum name=../atts.name minCount=../atts.minCount maxCount=../atts.maxCount}}
+          <button type="button" class="autoform-remove-item">Remove</button>
+        {{/if}}
+      </div>
+    {{/afEachArrayItem}}
+    {{#if afArrayFieldHasLessThanMaximum name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
+      <div style="margin-top: 20px;">
+        <button type="button" class="autoform-add-item" data-autoform-field="{{this.atts.name}}" data-autoform-minCount="{{this.atts.minCount}}" data-autoform-maxCount="{{this.atts.maxCount}}">Add</button>
+      </div>
+    {{/if}}
+  </fieldset>
+</template>
+
+
+
+<template name="afTextarea_crm">
+  <textarea {{atts}}>{{this.value}}</textarea>
+</template>

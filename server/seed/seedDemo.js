@@ -66,7 +66,7 @@ Meteor.startup(function() {
     // insert leads
     for(var i = 1; i <= 15; i++) {
       entity = {
-        name: Fake.sentence(_.random(2, 7)),
+        title: Fake.sentence(_.random(2, 7)),
         description: Fake.sentence(_.random(5, 30)),
         status: Fake.fromArray(leadStatuses)
       };

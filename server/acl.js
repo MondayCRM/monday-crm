@@ -17,4 +17,5 @@ Security.defineMethod("ifCanManageUsers", {
 Activities.permit(['insert', 'update', 'remove']).ifLoggedIn().apply();
 Settings.permit(['insert', 'update', 'remove']).apply();
 Contacts.permit(['insert', 'update', 'remove']).apply();
+Leads.permit(['insert', 'update', 'remove']).apply();
 
