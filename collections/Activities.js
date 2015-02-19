@@ -1,4 +1,4 @@
-Activities = new Mongo.Collection('activities');
+Activities = new Meteor.Collection('activities');
 
 Activities.attachSchema(new SimpleSchema({
   reference: {

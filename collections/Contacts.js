@@ -1,4 +1,4 @@
-Contacts = new Mongo.Collection('contacts');
+Contacts = new Meteor.Collection('contacts');
 
 
 ContactsSchema = new SimpleSchema([{

@@ -1,4 +1,4 @@
-Leads = new Mongo.Collection('leads');
+Leads = new Meteor.Collection('leads');
 
 Leads.attachSchema(new SimpleSchema({
   title: {

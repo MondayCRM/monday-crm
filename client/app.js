@@ -26,3 +26,11 @@ _.extend(Blaze.View.prototype,{
 
 
 EditableText.saveOnFocusout=false
+
+
+Session.set("Mongol", {
+  'collections': ['Contacts', 'JobPositions', 'Leads', 'Activity', 'Users', 'Settings'],
+  'display': true,
+  'opacity_normal': ".7",
+  'opacity_expand': ".9"
+});

@@ -1,4 +1,4 @@
-Settings = new Mongo.Collection("settings");
+Settings = new Meteor.Collection("settings");
 
 SettingsSchema = new SimpleSchema({
   language: {

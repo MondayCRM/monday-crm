@@ -1,4 +1,4 @@
-JobPositions = new Mongo.Collection('jobPositions');
+JobPositions = new Meteor.Collection('jobPositions');
 
 var jobPositionsSchema = new SimpleSchema([{
   employer_id: {
