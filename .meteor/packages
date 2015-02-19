@@ -33,6 +33,7 @@ http
 json
 harrison:papa-parse
 momentjs:moment
+rcy:nouislider
 
 # Monday packages
 monday-base
@@ -40,4 +41,3 @@ monday-i18n
 monday-import-csv
 monday-index-podnikatela-driver
 
-rcy:nouislider

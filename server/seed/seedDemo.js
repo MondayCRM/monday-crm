@@ -23,6 +23,8 @@ Meteor.startup(function() {
 
     Settings.insert({});
 
+    var allUsers = Users.find().fetch();
+
 
     var entity = {};
 
@@ -50,7 +52,7 @@ Meteor.startup(function() {
 
       var count = _.random(0, 4);
       for(var j = count; j <= 6; j++) {
-        jobholder = _.sample(contacts);
+        var jobholder = _.sample(contacts);
         if(jobholder == contactId) continue;
 
         jobPositions.push(JobPositions.insert({
@@ -65,10 +67,34 @@ Meteor.startup(function() {
 
     // insert leads
     for(var i = 1; i <= 15; i++) {
+      var leadContacts = [];
+      var leadJobPositions = [];
+
+      var count = _.random(1, 3);
+      for(var j = count; j <= 2; j++) {
+        leadContacts.push({
+          _id: _.sample(contacts),
+          sort: j
+        });
+      }
+
+      var count = _.random(1, 3);
+      for(var j = count; j <= 2; j++) {
+        leadJobPositions.push({
+          _id: _.sample(jobPositions),
+          sort: j
+        });
+      }
+
       entity = {
         title: Fake.sentence(_.random(2, 7)),
         description: Fake.sentence(_.random(5, 30)),
-        status: Fake.fromArray(leadStatuses)
+        status: Fake.fromArray(leadStatuses),
+        progress: _.sample([10, 20, 30, 60, 80, 90, 100]),
+        createdBy_id: _.sample(allUsers)._id,
+        assignedTo_id: _.sample(allUsers)._id,
+        contacts_ids: leadContacts,
+        jobPositions_ids: leadJobPositions
       };
 
       var leadId = Leads.insert(entity);

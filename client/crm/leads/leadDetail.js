@@ -2,6 +2,7 @@ Template.leadDetail.rendered = function() {
   var instance = this;
 
   var lead = instance.data.lead;
+
   $('#slider-step').noUiSlider({
     start: [ lead.progress || 0 ],
     connect: 'lower',
@@ -15,6 +16,9 @@ Template.leadDetail.rendered = function() {
       Leads.update(lead._id, {$set: {progress: $(this).val()}});
     }
   });
+
+  $('.material-select').material_select();
+
 };
 
 Template.leadDetail.helpers({});

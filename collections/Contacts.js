@@ -61,3 +61,12 @@ ContactsSchema = new SimpleSchema([{
 }, contactsFieldsSchema]);
 
 Contacts.attachSchema(ContactsSchema);
+
+Contacts.helpers({
+  getEmailsAddresses: function() {
+    return getColumn(this.emails, 'address')
+  },
+  getPhoneNumbers: function() {
+    return getColumn(this.phones, 'number')
+  }
+});

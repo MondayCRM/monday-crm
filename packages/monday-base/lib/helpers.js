@@ -1,3 +1,16 @@
+getCollection = function (string) {
+  for (var globalObject in window) {
+    if (window[globalObject] instanceof Meteor.Collection) {
+      if (globalObject === string) {
+        return (window[globalObject]);
+        break;
+      }
+    }
+  }
+  return undefined; // if none of the collections match
+};
+
+
 // ------------------------------ Settings ------------------------------ //
 
 getSetting = function(setting, defaultValue){
@@ -52,6 +65,14 @@ checkNested = function(obj /*, level1, level2, ... levelN*/) {
     obj = obj[args[i]];
   }
   return true;
+};
+
+getColumn = function(array, columnName) {
+  var column = []
+  for(var x in array)
+    column.push(array[x][columnName]);
+
+  return column
 };
 
 // http://stackoverflow.com/questions/5484673/javascript-how-to-dynamically-create-nested-objects-using-object-names-given-by

@@ -14,6 +14,7 @@ Package.onUse(function (api) {
     'getSetting',
     'log',
     'checkNested',
+    'getColumn',
     'assignToObject',
     'isObjectEmpty',
     'goTo'

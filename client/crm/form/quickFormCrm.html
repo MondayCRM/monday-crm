@@ -17,13 +17,23 @@
 
 
 <template name="afFormGroup_crm">
-  <div class="input-field col s12 {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
-    {{#unless this.skipLabel}}
-      <label {{this.afFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
-    {{/unless}}
-    {{> afFieldInput customAfFieldInputAtts}}
-    <span>{{{afFieldMessage name=this.atts.name}}}</span>
-  </div>
+  {{#if isComponentType 'select'}}
+    <div class="col s12 {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+      {{#unless this.skipLabel}}
+        <label {{crmFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+      {{/unless}}
+      {{> afFieldInput crmFieldInputAtts}}
+      <span>{{{afFieldMessage name=this.atts.name}}}</span>
+    </div>
+  {{else}}
+    <div class="input-field col s12 {{#if afFieldIsInvalid name=this.atts.name}}has-error{{/if}}">
+      {{> afFieldInput crmFieldInputAtts}}
+      {{#unless this.skipLabel}}
+        <label {{crmFieldLabelAtts}}>{{#if this.labelText}}{{this.labelText}}{{else}}{{afFieldLabelText name=this.atts.name}}{{/if}}</label>
+      {{/unless}}
+      <span>{{{afFieldMessage name=this.atts.name}}}</span>
+    </div>
+  {{/if}}
 </template>
 
 <template name="afObjectField_crm">
