@@ -61,7 +61,14 @@ Leads.helpers({
     });
     return JobPositions.find({_id: {$in: ids}});
   },
+  getNotes: function() {
+    return this.filterActivities({type: Meteor.App.ACTIVITY_TYPES.NOTE});
+  },
   getActivities: function() {
     return Activities.find({reference: {_id: this._id, collection: 'Leads'}});
+  },
+  filterActivities: function(filter) {
+    filter = _.extend(filter, {'reference._id': this._id, 'reference.collection': 'Leads'});
+    return Activities.find(filter);
   }
 });

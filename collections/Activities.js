@@ -12,10 +12,22 @@ Activities.attachSchema(new SimpleSchema({
   },
   type: {
     type: String,
-    allowedValues: activityTypes,
-    defaultValue: Meteor.App.ACTIVITY_TYPES.CALL
+    defaultValue: Meteor.App.ACTIVITY_TYPES.CALL,
+    allowedValues: activityTypes
+  },
+  status: {
+    type: String,
+    defaultValue: Meteor.App.ACTIVITY_STATUS.OPENED,
+    allowedValues: activityStatuses
   },
   description: {
+    type: String,
+    optional: true
+  },
+  createdBy_id: {
+    type: String
+  },
+  assignedTo_id: {
     type: String,
     optional: true
   },

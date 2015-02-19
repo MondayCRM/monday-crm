@@ -31,6 +31,13 @@
           {{/autoForm}}
         </div>
       </div>
+      <div class="row">
+        {{#each lead.getNotes}}
+          <div class="col m12">
+            {{> activityBlock}}
+          </div>
+        {{/each}}
+      </div>
     </div>
     <div class="col m6">
       <div class="row">

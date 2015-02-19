@@ -5,7 +5,7 @@ Meteor.startup(function() {
     var createTask = function(referenceId) {
       entity = {
         reference_id: referenceId,
-        status: Fake.fromArray(taskStatuses),
+        status: Fake.fromArray(activityStatuses),
         mission: Fake.sentence(_.random(20, 50))
       };
 
@@ -14,7 +14,6 @@ Meteor.startup(function() {
 
 
     // remove data
-    Tasks.remove({});
     Activities.remove({});
     Leads.remove({});
     JobPositions.remove({});
@@ -100,19 +99,10 @@ Meteor.startup(function() {
       var leadId = Leads.insert(entity);
       leads.push(leadId);
 
-      // add activities
+      // add Nodes
       var count = _.random(1,7);
-      for(var j = count; j <= 0; j++) {
-        entity = {
-          reference: {
-            _id: leadId,
-            collection: 'Leads'
-          },
-          type: _.sample(activityTypes),
-          description: Fake.sentence(_.random(3, 12))
-        };
-
-        Activities.insert(entity);
+      for(var j = count; j <= 7; j++) {
+        createNote(leadId, 'Leads');
       }
     }
 
@@ -127,4 +117,27 @@ Meteor.startup(function() {
 
     console.log('> seedDemo end.');
   }
+
+  function createNote(id, collection) {
+    return createActivity(id, collection, Meteor.App.ACTIVITY_TYPES.NOTE);
+  }
+
+  function createActivity(id, collection, type) {
+    var entity = {
+      reference: {
+        _id: id,
+        collection: collection
+      },
+      type: type,
+      status: _.sample(activityStatuses),
+      description: Fake.sentence(_.random(3, 12)),
+      createdBy_id: _.sample(allUsers)._id,
+      assignedTo_id: _.random(0,1) ? _.sample(allUsers)._id : null
+    };
+
+    return Activities.insert(entity);
+  }
+
+
 });
+

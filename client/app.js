@@ -25,11 +25,11 @@ _.extend(Blaze.View.prototype,{
 
 
 
-EditableText.saveOnFocusout=false
+EditableText.saveOnFocusout=false;
 
 
 Session.set("Mongol", {
-  'collections': ['Contacts', 'JobPositions', 'Leads', 'Activity', 'Users', 'Settings'],
+  'collections': ['Contacts', 'JobPositions', 'Leads', 'Activities', 'Users', 'Settings'],
   'display': true,
   'opacity_normal': ".7",
   'opacity_expand': ".9"
