@@ -25,7 +25,6 @@ jparker:gravatar
 reactive-var
 msavin:mongol
 meteorhacks:subs-manager
-d0minikk:materialize-meteor
 percolate:momentum
 jquery
 tap:i18n
@@ -41,3 +40,4 @@ monday-i18n
 monday-import-csv
 monday-index-podnikatela-driver
 
+semantic:ui-css

@@ -1,21 +1,18 @@
 <template name="signUpForm">
-  <form id="sign-up-form" class="row">
-    <div class="input-field col s12">
-      <i class="mdi-action-account-circle prefix"></i>
-      <input name="name" id="up-name" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <form id="sign-up-form" class="ui form">
+    <div class="field">
       <label for="up-name">{{_ "name"}}</label>
+      <input name="name" id="up-name" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
-    <div class="input-field col s12">
-      <i class="mdi-communication-email prefix"></i>
-      <input name="email" id="up-email" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <div class="field">
       <label for="up-email">{{_ "email"}}</label>
+      <input name="email" id="up-email" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
-    <div class="input-field col s12">
-      <i class="mdi-communication-vpn-key prefix"></i>
-      <input name="password" id="up-password" type="password" class="validate">
+    <div class="field">
       <label for="up-password">{{_ "password"}}</label>
+      <input name="password" id="up-password" type="password" class="validate">
     </div>
-    <div class="col s12 logBtn">
+    <div class="field logBtn">
       <span class="red-text">{{errorMessage}}</span>
       <button type="submit" class="waves-effect waves-light btn red darken-4">{{_ "sign_up"}}</button>
     </div>

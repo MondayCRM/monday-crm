@@ -2,21 +2,25 @@
 	<div class="full-background">
 		<div id="particles"></div>
 		<div class="front-background"></div>
-		<div class="container login">
-			<div class="section">
-				<div class="row">
-					<div class="col col l6 m6 s12 ">
-						<h2><b>MONDAY</b><span>CRM</span></h2>
-						<blockquote>
-							{{_ "motto"}}
-						</blockquote>
-					</div>
-					<div class="col col l4 offset-l2 m6 s12">
-            {{#if currentUser}}
-              <p>You're logged in. <a href="{{pathFor route="signOut"}}">sign out</a></p>
-            {{else}}
-              {{> accountTabs}}
-            {{/if}}
+	</div>
+	<div class="login main container">
+		<div class="section">
+			<div class="ui stackable doubling three column grid">
+				<div class="column right floated">
+					<div class=" ui stacked segment">
+						<div class="">
+							<h1><b>MONDAY</b><span>CRM</span></h1>
+							<p>{{_ "motto"}}</p>
+						</div>
+						<div class="">
+
+							{{#if currentUser}}
+							<p>You're logged in. <a href="{{pathFor route="signOut"}}">sign out</a></p>
+							{{else}}
+							{{> accountTabs}}
+							{{/if}}
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -26,19 +30,19 @@
 
 
 <template name="accountTabs">
-  <div class="icon-block login-form">
-    <ul class="tabs">
-      <li class="tab col s6"><a class="active" href="#login"><i class="mdi-action-lock-outline"></i> Login</a></li>
-      <li class="tab col s6"><a href="#registration"><i class="mdi-file-folder-shared"></i> Signup</a></li>
-    </ul>
+	<div class="icon-block login-form">
+		<div class="ui top attached tabular menu">
+			<a class="item active"   data-tab="login"> Login</a>
+			<a class="item" data-tab="registration"> Signup</a>
+		</div>
 
-    <p class="light" id="login">
-      {{> signInForm}}
-    </p>
+		<p class="light" id="login" data-tab="login">
+			{{> signInForm}}
+		</p>
 
-    <p id="registration">
-      {{> signUpForm}}
-    </p>
+		<p id="registration" data-tab="registration">
+			{{> signUpForm}}
+		</p>
 
-  </div>
+	</div>
 </template>

@@ -1,18 +1,16 @@
 <template name="signInForm">
-  <form id="sign-in-form" class="row">
-    <div class="input-field col s12">
-      <i class="mdi-action-account-circle prefix"></i>
-      <input id="in-email" name="email" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <form id="sign-in-form" class="ui form">
+    <div class="field">
       <label for="in-email">{{_ "email_or_username"}}</label>
+      <input id="in-email" name="email" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
-    <div class="input-field col s12">
-      <i class="mdi-communication-vpn-key prefix"></i>
-      <input id="in-password" name="password" type="password" class="validate">
+    <div class="field">
       <label for="in-password">{{_ "password"}}</label>
+      <input id="in-password" name="password" type="password" class="validate">
     </div>
-    <div class="col s12 logBtn">
+    <div class="field logBtn">
       <span class="red-text">{{errorMessage}}</span>
-      <button type="submit" class="waves-effect waves-light btn blue lighten-1">{{_ "sign_in"}}</button>
+      <button type="submit ui button">{{_ "sign_in"}}</button>
     </div>
   </form>
 </template>

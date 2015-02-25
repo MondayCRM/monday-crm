@@ -19,7 +19,6 @@ callback-hook@1.0.2
 cfs:http-methods@0.0.27
 check@1.0.4
 coffeescript@1.0.5
-d0minikk:materialize-meteor@1.95.1
 dburles:collection-helpers@1.0.2
 dburles:mongo-collection-instances@0.2.6
 ddp@1.0.14
@@ -80,6 +79,7 @@ reactive-var@1.0.4
 reload@1.1.2
 retry@1.0.2
 routepolicy@1.0.4
+semantic:ui-css@1.9.3
 service-configuration@1.0.3
 session@1.0.5
 sha@1.0.2
