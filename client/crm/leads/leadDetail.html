@@ -12,7 +12,7 @@
             <div class="col m10">
               <div class="row">
                 <div class="col m12">
-                  {{> afQuickField name='title'}}
+                    {{> afQuickField name='title'}}
                 </div>
                 <div class="col m5">
                   {{> afQuickField name='status' id='lead-status' options="allowed" class='material-select'}}
@@ -32,6 +32,9 @@
         </div>
       </div>
       <div class="row">
+        <div class="col m12">
+          {{> activityForm}}
+        </div>
         {{#each lead.getNotes}}
           <div class="col m12">
             {{> activityBlock}}

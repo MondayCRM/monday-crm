@@ -42,3 +42,16 @@ Activities.attachSchema(new SimpleSchema({
     }
   }
 }));
+
+
+Activities.helpers({
+  createdBy: function() {
+    return Users.findOne(this.createdBy_id);
+  },
+  typeIcon: function() {
+    return Meteor.App.ACTIVITY_TYPES_ICONS[this.type.toUpperCase()];
+  },
+  statusIcon: function() {
+    return Meteor.App.ACTIVITY_STATUS_ICONS[this.status.toUpperCase()];
+  }
+});

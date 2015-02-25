@@ -13,3 +13,9 @@ Meteor.publish('users-i-can-manage', function (userId) {
     return Meteor.users.find({_id: userId}, {fields: fields});
   }
 });
+
+
+Meteor.publish('users', function () {
+  return Users.find({});
+});
+

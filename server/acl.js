@@ -11,10 +11,10 @@ Security.defineMethod("ifCanManageUsers", {
 });
 
 
-//Users.permit(['insert', 'update', 'remove']).ifCanManageUsers().apply();
+//Users.permit(['insert', 'update', 'remove']).ifLoggedIn().ifCanManageUsers().apply();
 
 
-Activities.permit(['insert', 'update', 'remove']).ifLoggedIn().apply();
+Activities.permit(['insert', 'update', 'remove']).apply();
 Settings.permit(['insert', 'update', 'remove']).apply();
 Contacts.permit(['insert', 'update', 'remove']).apply();
 Leads.permit(['insert', 'update', 'remove']).apply();

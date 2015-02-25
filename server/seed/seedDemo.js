@@ -5,7 +5,7 @@ Meteor.startup(function() {
     var createTask = function(referenceId) {
       entity = {
         reference_id: referenceId,
-        status: Fake.fromArray(activityStatuses),
+        status: Fake.fromArray(activityStatusesIcons),
         mission: Fake.sentence(_.random(20, 50))
       };
 
@@ -129,7 +129,7 @@ Meteor.startup(function() {
         collection: collection
       },
       type: type,
-      status: _.sample(activityStatuses),
+      status: _.sample(activityStatusesIcons),
       description: Fake.sentence(_.random(3, 12)),
       createdBy_id: _.sample(allUsers)._id,
       assignedTo_id: _.random(0,1) ? _.sample(allUsers)._id : null

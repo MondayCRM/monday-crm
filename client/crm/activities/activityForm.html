@@ -1,0 +1,10 @@
+<template name="activityForm">
+  {{# autoForm collection="Activities" id="addActivity" type="insert" autosave=true}}
+    {{> afQuickField name='status' options="allowed" class='material-select'}}
+    {{> afQuickField name='type' options="allowed" class='material-select'}}
+    {{> afQuickField name='description' type='textarea'}}
+    {{> afFieldInput name='reference._id' type='hidden' value=lead._id}}
+    {{> afFieldInput name='reference.collection' type='hidden' value='Leads'}}
+    <input type="submit" class="btn btn-primary" value="Add" />
+  {{/autoForm}}
+</template>
