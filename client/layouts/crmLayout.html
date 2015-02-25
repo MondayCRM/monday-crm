@@ -1,8 +1,10 @@
 <template name="crmLayout">
-	<header>
-		{{>sideNavigation}}
-	</header>
-	<main>
-		{{> yield}}
-	</main>
+  <div id="crm">
+    <div id="sidebar">
+      {{>sideNavigation}}
+    </div>
+    <div id="main">
+      {{> yield}}
+    </div>
+  </div>
 </template>

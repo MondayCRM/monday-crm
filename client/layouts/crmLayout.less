@@ -1,2 +1,36 @@
 .hide { display: none; }
 
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#crm {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}
+
+#main {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+}
+#sidebar {
+  -webkit-flex: 0 0 200px;
+  -moz-flex: 0 0 200px;
+  flex: 0 0 200px;
+}
+
+
+@media only screen and (max-width : 992px) {
+  #sidebar {
+    -webkit-flex: 0 0 80px;
+    -moz-flex: 0 0 80px;
+    flex: 0 0 80px;
+  }
+
+}
+
