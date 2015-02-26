@@ -9,7 +9,7 @@ aldeed:simple-schema@1.3.0
 anti:fake@0.4.1
 application-configuration@1.0.4
 autoupdate@1.1.5
-babrahams:editable-text@0.7.11
+babrahams:editable-text@0.7.12
 base64@1.0.2
 binary-heap@1.0.2
 blaze@2.0.4
@@ -20,7 +20,7 @@ cfs:http-methods@0.0.27
 check@1.0.4
 coffeescript@1.0.5
 dburles:collection-helpers@1.0.2
-dburles:mongo-collection-instances@0.2.6
+dburles:mongo-collection-instances@0.3.1
 ddp@1.0.14
 deps@1.0.6
 djedi:sanitize-html@1.3.0
@@ -55,17 +55,17 @@ localstorage@1.0.2
 logging@1.0.6
 meteor@1.1.4
 meteor-platform@1.2.1
-meteorhacks:subs-manager@1.2.4
+meteorhacks:subs-manager@1.3.0
 minifiers@1.1.3
 minimongo@1.0.6
 mobile-status-bar@1.0.2
-momentjs:moment@2.8.4
+momentjs:moment@2.9.0
 monday-base@0.0.0
 monday-i18n@0.0.0
 monday-import-csv@0.0.1
 monday-index-podnikatela-driver@0.0.1
 mongo@1.0.11
-msavin:mongol@0.1.1
+msavin:mongol@0.4.4
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ongoworks:security@1.0.1
@@ -79,7 +79,7 @@ reactive-var@1.0.4
 reload@1.1.2
 retry@1.0.2
 routepolicy@1.0.4
-semantic:ui-css@1.9.3
+semantic:ui-css@1.10.2_1
 service-configuration@1.0.3
 session@1.0.5
 sha@1.0.2
@@ -91,7 +91,7 @@ templating@1.0.11
 tracker@1.0.5
 ui@1.0.5
 underscore@1.0.2
-underscorestring:underscore.string@2.4.0
+underscorestring:underscore.string@3.0.3
 url@1.0.3
 webapp@1.1.6
 webapp-hashing@1.0.2
