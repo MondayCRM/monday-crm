@@ -14,6 +14,7 @@ iron:router
 aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
+jameslefrere:autoform-semantic-ui
 dburles:collection-helpers
 alanning:roles
 
