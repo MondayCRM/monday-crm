@@ -15,3 +15,12 @@ Router.route('/sandbox/contactDetail', {
     this.render();
   }
 });
+
+Router.route('/sandbox/leadBoxes', {
+  layoutTemplate: 'sandboxLayout',
+  name: 'leadBoxes_sandbox',
+  template: 'leadBoxes_sandbox',
+  action: function () {
+    this.render();
+  }
+});
