@@ -7,6 +7,7 @@
 	padding: 10px 20px 20px 80px !important;
 	height: 65px;
 	overflow: hidden;
+    transition: box-shadow .3s;
 
 	.ui.selected.labels .label, .ui.selected.label, 
 	.ui.labels .selected.label:before, .ui.selected.labels .label:before, .ui.selected.label:before{
@@ -42,6 +43,12 @@
 		position: absolute;
 		right: 5px;
 		top: 5px;
+	}
+
+	&:hover{
+		-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	}
 }
 

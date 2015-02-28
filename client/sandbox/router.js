@@ -6,3 +6,12 @@ Router.route('/sandbox/contactListBox', {
     this.render();
   }
 });
+
+Router.route('/sandbox/contactDetail', {
+  layoutTemplate: 'contactDetail_sandbox',
+  name: 'contactDetail_sandbox',
+  template: 'contactDetail_sandbox',
+  action: function () {
+    this.render();
+  }
+});
