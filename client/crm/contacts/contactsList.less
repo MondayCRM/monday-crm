@@ -2,10 +2,21 @@
 	background-image: url("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c47.0.160.160/p160x160/10354686_10150004552801856_220367501106153455_n.jpg?oh=b85ac8dcf49590768775c943f2bfa6cf&oe=55677C49&__gda__=1431459897_68d32c3e6c8ea4e7159e860efff2d01a");
 	background-position: left center;
 	background-size: 65px 65px;
+	margin-top: 20px !important;
 	background-repeat: no-repeat;
-	padding: 10px 20px 20px 80px;
+	padding: 10px 20px 20px 80px !important;
 	height: 65px;
 	overflow: hidden;
+
+	.ui.selected.labels .label, .ui.selected.label, 
+	.ui.labels .selected.label:before, .ui.selected.labels .label:before, .ui.selected.label:before{
+		background-color: #2196f3;
+		border-color: #2196f3;
+	}
+
+	a.ui.selected.labels .label:hover, a.ui.selected.label:hover{
+		border-color: #2196f3;
+	}
 
 	span{
 		position: relative;
