@@ -16,10 +16,10 @@ Router.route('/sandbox/contactDetail', {
   }
 });
 
-Router.route('/sandbox/leadBoxes', {
+Router.route('/sandbox/leadListBox', {
   layoutTemplate: 'sandboxLayout',
-  name: 'leadBoxes_sandbox',
-  template: 'leadBoxes_sandbox',
+  name: 'leadListBox_sandbox',
+  template: 'leadListBox_sandbox',
   action: function () {
     this.render();
   }
