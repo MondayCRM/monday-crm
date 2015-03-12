@@ -1,0 +1,32 @@
+<template name="sideNavigation_sandbox">
+  <div class="text-center gravatar">
+    <img class="img-circle" src="http://www.gravatar.com/avatar/d7a231c065d77c7a087fad0f039df5c6?size=120&amp;default=mm&amp;r=g">
+    <strong>Branislav Vaculčiak</strong>
+  </div>
+
+  <hr />
+  <ul class="nav nav-sidebar">
+    <li><a href=""><span class="fa fa-dashboard"></span> Dashboard</a></li>
+  </ul>
+  <hr />
+  <h4>CRM</h4>
+  <ul class="nav nav-sidebar">
+    <!--<li class="bold {{isActiveRoute regex='^contacts'}}"><a href="#"><i class="mdi-action-dashboard"></i> {{_ "dashboard"}}</a></li>-->
+    <li class="bold {{isActiveRoute regex='^leads'}}"><a href="{{pathFor route='leads'}}"><i class="mdi-editor-attach-money"></i> {{_ "leads"}}</a></li>
+    <!--<li class="bold {{isActiveRoute regex='^contacts'}}"><a href="#"><i class="mdi-action-track-changes"></i> {{_ "opprotunities"}}</a></li>-->
+    <li class="bold {{isActiveRoute regex='^contacts'}}"><a href="{{pathFor route='contacts'}}"><i class="mdi-social-people"></i> {{_ "contacts"}}</a></li>
+    <li class="bold"><a href="#"><i class="mdi-file-folder"></i> {{_ "documents"}}</a></li>
+  </ul>
+  <hr />
+  <h4>Mailchimp</h4>
+  <ul class="nav nav-sidebar">
+    <li><a href=""><span class="fa fa-send"></span> Campaigns</a></li>
+    <li><a href=""><span class="fa fa-group"></span> Groups</a></li>
+    <li><a href=""><span class="fa fa-paint-brush"></span> Tempates</a></li>
+    <li><a href=""><span class="fa fa-bar-chart"></span> Reports</a></li>
+  </ul>
+  <hr />
+  <ul class="nav nav-sidebar">
+    <li><a href=""><span class="fa fa-power-off"></span> Logout</a></li>
+  </ul>
+</template>

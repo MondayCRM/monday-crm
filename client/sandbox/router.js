@@ -1,5 +1,5 @@
 Router.route('/sandbox/contactListBox', {
-  layoutTemplate: 'contactListBox_sandbox',
+  layoutTemplate: 'sandboxLayout',
   name: 'contactListBox_sandbox',
   template: 'contactListBox_sandbox',
   action: function () {
@@ -8,7 +8,7 @@ Router.route('/sandbox/contactListBox', {
 });
 
 Router.route('/sandbox/contactDetail', {
-  layoutTemplate: 'contactDetail_sandbox',
+  layoutTemplate: 'sandboxLayout',
   name: 'contactDetail_sandbox',
   template: 'contactDetail_sandbox',
   action: function () {

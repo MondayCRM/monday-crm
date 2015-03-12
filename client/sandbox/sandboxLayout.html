@@ -1,8 +1,12 @@
 <template name="sandboxLayout">
-  <div class="sandbox container fluid">
-  	<div class="row">
-  	
-    {{> yield}}
+  <div id="crm" class="container-fluid">
+    <div class="row">
+      <div class="sidebar col-sm-6 col-md-4 hidden-xs">
+        {{>sideNavigation}}
+      </div>
+      <div class="main col-sm-18 col-sm-offset-6 col-md-20 col-md-offset-4">
+        {{> yield}}
+      </div>
     </div>
   </div>
 </template>
